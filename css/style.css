@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-duration: 0.4s;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.nav-btns {
+  background-color: white;
+  box-shadow: 0 0 10px gainsboro;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btns a {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.btns a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: dodgerblue;
+  transform-origin: center;
+  transition: transform 0.25s ease-out;
+}
+
+.btns a:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+.btns a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: gray;
+  font-size: 16px;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+h3 {
+  margin-left: 10px;
+  font-size: 16px;
+  color: gray;
+}
+
+#view-photo {
+  width: 40px;
+  align-items: center;
+  border-radius: 50%;
+  margin-left: 20px;
+  /* cursor: pointer; */
+}
+
+.shape {
+  border: 2px solid gray;
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+#initial {
+  text-align: center;
+}
+
+#home {
+  /* background: #fffff7; */
+  height: 100vh;
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  margin: auto;
+  width: 700px;
+  padding: 10px;
+}
+
+.about h1 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.intro {
+  margin: 12px auto;
+  color: gray;
+  text-align: center;
+  width: 500px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+#project {
+  display: block;
+  margin: 30px auto;
+  text-decoration: none;
+  background: dodgerblue;
+  color: white;
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#project:hover {
+  background-color: #0087ca;
+}
+
+#about-me {
+  padding: 5rem 0;
+  height: 100%;
+}
+
+.about-div {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: #fffff7;
+}
+
+.about-head {
+  width: 800px;
+  margin: 12px auto;
+}
+
+#about-header {
+  font-size: 25px;
+  color: dodgerblue;
+}
+
+#tech {
+  margin-top: 18px;
+}
+
+#skills li {
+  list-style-position: inside;
+  display: inline-block;
+  padding: 5px;
+  color: gray;
+}
+
+.about-info h4 {
+  font-weight: 500;
+  color: dodgerblue;
+}
+
+hr {
+  border: none;
+  height: 0.5px;
+  margin: 10px 0;
+  background-color: gray;
+}
+
+h2 {
+  letter-spacing: 2px;
+}
+
+#bachelor {
+  color: black;
+  margin-top: 15px;
+}
+
+#mba {
+  color: black;
+}
+
+.info p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: gray;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-img {
+  padding: 25px;
+  width: 400px;
+}
+
+.about-img h4 {
+  color: dodgerblue;
+  font-weight: 500;
+}
+
+.about-img img {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px gainsboro;
+  margin: auto;
+  display: block;
+  border: 2px solid gray;
+}
+
+.about-info {
+  width: 500px;
+  padding: 10px;
+}
+
+.education p {
+  font-size: 16px;
+  margin: 2px 0;
+  color: gray;
+}
+
+.training {
+  margin-top: 20px;
+}
+
+#resume {
+  margin: 30px 0;
+}
+
+#resume-btn {
+  text-decoration: none;
+  color: dodgerblue;
+  background-color: transparent;
+  transition-duration: 0.4s;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid dodgerblue;
+}
+
+#resume-btn:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.training p {
+  color: gray;
+}
+
+#projects {
+  height: 100%;
+  padding: 5rem 0;
+}
+
+.myProjects {
+  width: 800px;
+  margin: 8px auto;
+  text-align: left;
+}
+
+.myProjects h2 {
+  letter-spacing: normal;
+  color: dodgerblue;
+  margin-bottom: 20px;
+}
+
+.project-details {
+  width: 800px;
+  margin: 12px auto;
+  box-shadow: 0 0 10px 1px gainsboro;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #fffff7;
+}
+
+.project-details > ul > li {
+  padding: 5px 0;
+  list-style-type: none;
+  list-style-position: inside;
+  color: gray;
+}
+
+.used {
+  margin-top: 10px;
+}
+
+#proj > li {
+  list-style-position: inside;
+  display: inline-block;
+  padding: 5px;
+  color: gray;
+}
+
+#github-link {
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  background: dodgerblue;
+  width: 100px;
+  margin-top: 12px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+
+#github-link:hover {
+  background-color: #0087ca;
+}
+
+#contact {
+  /* background: #fffff7; */
+  height: 100vh;
+  padding: 6rem 0;
+}
+
+#contact form {
+  width: 800px;
+  margin: 25px auto;
+  box-shadow: 0 0 10px gainsboro;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fffff7;
+}
+
+.form {
+  width: 800px;
+  margin: auto;
+}
+
+.links {
+  width: 300px;
+  margin: 10px 0;
+  display: flex;
+}
+
+.links a {
+  margin: 0 5px;
+  font-size: 20px;
+  border: 2px solid #4b5c77;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  background: #4b5c77;
+}
+
+#contact h4 {
+  text-align: left;
+  font-size: 24px;
+  color: dodgerblue;
+}
+
+#contact form input {
+  color: gray;
+  margin: 12px 0;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.4s;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+}
+
+#contact form input:focus,
+textarea:focus {
+  border-color: #0077b5;
+}
+
+textarea {
+  resize: none;
+  color: gray;
+  margin: 12px 0;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.4s;
+  border: 2px solid gray;
+  border-radius: 5px;
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  color: white;
+  margin: 12px 0;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  transition: 0.4s;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+  background-color: dodgerblue;
+  outline: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0087ca;
+}
+
+#copyright {
+  background-color: #ccc;
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+}
+
+.text {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------*/
+/* Styling of haeder width below 700px */
+
+.header {
+  box-shadow: 0 0px 10px -1px gray;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: none;
+  transition: 0.4s;
+}
+
+.heads {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username {
+  justify-content: center;
+  border: 2px solid gray;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.head-1 {
+  margin-left: 20px;
+}
+
+.head-2 {
+  margin-right: 20px;
+}
+
+.fa-bars {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.head-links {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  transition: margin-left, margin-right, 0.6s;
+  padding-top: 20px;
+  box-shadow: 0 0 10px gray;
+  backdrop-filter: blur(10px);
+}
+
+#close-btn {
+  margin-bottom: 40px;
+  color: red;
+}
+
+.head-links a {
+  margin: 20px 20px;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: grey;
+}
+
+.head-1 button {
+  background-color: transparent;
+  border: none;
+  color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .header {
+    display: block;
+  }
+
+  .nav-btns {
+    display: none;
+  }
+
+  .about {
+    width: 350px;
+  }
+
+  .intro {
+    width: 300px;
+  }
+
+  .about-div {
+    width: 350px;
+  }
+  .about-img {
+    width: 120px;
+  }
+
+  .about-img img {
+    width: 80px;
+  }
+  .about-info {
+    width: 220px;
+  }
+  .myProjects {
+    width: 350px;
+  }
+  .project-details {
+    width: 350px;
+  }
+  #contact form {
+    width: 350px;
+  }
+  .about-head {
+    width: 350px;
+  }
+  .form {
+    width: 350px;
+  }
+
+  #contact {
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+}
