@@ -18,22 +18,29 @@
     <div class="header" id="header">
       <div class="heads">
         <div class="head-1">
-          <button id="open-btn"><i class="fa fa-bars"></i></button>
+          <button id="open-btn" class="sidepanel-button">
+            <i class="fa fa-bars"></i>
+          </button>
         </div>
         <div class="head-2">
-          <div class="username"><p>MN</p></div>
+          <div class="username"><p id="intital-name">MN</p></div>
         </div>
       </div>
     </div>
 
     <div class="head-links" id="head-links">
-      <a href="javascript:void(0)"
-        ><i class="fa fa-close" id="close-btn"></i
-      ></a>
-      <a href="#home" id="jump-btn">HOME</a>
-      <a href="#about-me" id="jump-btn">ABOUT ME</a>
-      <a href="#projects" id="jump-btn">PROJECTS</a>
-      <a href="#contact" id="jump-btn">CONTACT</a>
+      <div class="back-btn-sidebar">
+        <a href="javascript:void(0)"
+          ><i class="fa fa-arrow-left" id="close-btn"></i
+        ></a>
+      </div>
+      <div class="nav-links">
+        <img src="image/Manideep.JPG" alt="" />
+        <a href="#home" id="jump-btn">HOME</a>
+        <a href="#about-me" id="jump-btn">ABOUT ME</a>
+        <a href="#projects" id="jump-btn">PROJECTS</a>
+        <a href="#contact" id="jump-btn">CONTACT</a>
+      </div>
     </div>
 
     <div class="nav-btns">
@@ -51,7 +58,7 @@
 
     <section id="home">
       <div class="about">
-        <h1>HEY, I'M MANIDEEP NAKKA</h1>
+        <h1 id="myName">HEY, I'M MANIDEEP NAKKA</h1>
         <div class="intro">
           <p>
             A passionate Software Developer eager to embark on my journey in the
@@ -71,8 +78,6 @@
       </div>
       <div class="about-div">
         <div class="about-img">
-          <img src="image/Manideep.JPG" />
-
           <h4 id="tech">TECHNICAL SKILLS</h4>
           <hr />
           <ul id="skills">
@@ -102,12 +107,13 @@
         </div>
         <div class="about-info">
           <div class="info">
+            <img src="image/Manideep.JPG" />
             <h4>INTRODUCTION</h4>
             <hr />
             <p>
               I am a recent MBA Finance graduate with a keen interest in
               blending financial expertise with technical skills. In addition to
-              my finance background, I have a prficient knowledge of Java
+              my finance background, I have a proficient knowledge of Java
               Programming and it's Frameworks like Spring and Hibernate and web
               technologies. I am passionate about leveraging technology to
               streamline financial processes and enhance decision-making
@@ -127,13 +133,12 @@
             <h4>EDUCATION</h4>
             <hr />
             <h4 id="mba">
-              Master of Business Administration
-              (Finance)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2020-2022
+              Master of Business Administration (Finance)<br />2020-2022
             </h4>
             <p>Sri Indu P.G College</p>
             <p>6.59 GPA</p>
             <h4 id="bachelor">
-              Bachelor of Commerce (Computers) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              Bachelor of Commerce (Computers)<br />
               2017-2020
             </h4>
             <p>Arunodaya Degree College</p>
@@ -333,7 +338,7 @@
     <section id="contact">
       <div class="form">
         <h4>Get in Touch</h4>
-        <form action="https://formspree.io/f/meojqanp" method="POST">
+        <form action="https://formspree.io/f/meojqanp" method="POST" id="form">
           <input
             type="hidden"
             name="_subject"
@@ -369,10 +374,13 @@
     <section id="copyright">
       <div class="copyright-text">
         <p class="text">
-          copyright <i class="fa fa-copyright"></i> 2024 Manideep Nakka
+          copyright <i class="fa fa-copyright"></i> 2024 Manideep Nakka, All
+          rights reserved
         </p>
       </div>
     </section>
+
+    <div class="overlay"></div>
 
     <script src="js/script.js"></script>
     <script></script>

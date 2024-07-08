@@ -23,8 +23,8 @@ body {
 
 .btns {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  gap: 15px;
 }
 
 .btns a {
@@ -52,10 +52,14 @@ body {
 }
 
 .btns a {
-  margin: 0 12px;
   text-decoration: none;
   color: gray;
   font-size: 16px;
+}
+
+.fa-moon-o {
+  font-size: 20px;
+  color: gray;
 }
 
 .img {
@@ -149,7 +153,10 @@ h3 {
   display: flex;
   justify-content: center;
   margin: auto;
+  flex-direction: column-reverse;
   background-color: #fffff7;
+  border-radius: 5px;
+  box-shadow: 0 0 10px gainsboro;
 }
 
 .about-head {
@@ -207,8 +214,9 @@ h2 {
 }
 
 .about-img {
-  padding: 25px;
-  width: 400px;
+  margin: 10px;
+  width: 500px;
+  margin: auto;
 }
 
 .about-img h4 {
@@ -216,16 +224,17 @@ h2 {
   font-weight: 500;
 }
 
-.about-img img {
+.about-info img {
   width: 200px;
   border-radius: 50%;
   box-shadow: 0 0 10px gainsboro;
-  margin: auto;
+  margin: 20px auto;
   display: block;
   border: 2px solid gray;
 }
 
 .about-info {
+  margin: auto;
   width: 500px;
   padding: 10px;
 }
@@ -284,10 +293,14 @@ h2 {
 .project-details {
   width: 800px;
   margin: 12px auto;
-  box-shadow: 0 0 10px 1px gainsboro;
+  box-shadow: 0 0 10px gainsboro;
   border-radius: 5px;
   padding: 20px;
   background-color: #fffff7;
+}
+
+.project-details h4 {
+  color: dodgerblue;
 }
 
 .project-details > ul > li {
@@ -330,7 +343,7 @@ h2 {
   padding: 6rem 0;
 }
 
-#contact form {
+#form {
   width: 800px;
   margin: 25px auto;
   box-shadow: 0 0 10px gainsboro;
@@ -427,8 +440,9 @@ button:hover {
 }
 
 .text {
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
+  color: black;
 }
 
 /* ---------------------------------------------------------------*/
@@ -458,6 +472,11 @@ button:hover {
   width: 40px;
   padding: 5px;
   border-radius: 50%;
+  color: black;
+}
+
+#username {
+  color: black;
 }
 
 .head-1 {
@@ -465,12 +484,23 @@ button:hover {
 }
 
 .head-2 {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
+  gap: 20px;
 }
 
 .fa-bars {
   font-size: 24px;
   cursor: pointer;
+  color: grey;
+}
+
+.head-links img {
+  width: 100px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
 }
 
 .head-links {
@@ -488,15 +518,26 @@ button:hover {
   backdrop-filter: blur(10px);
 }
 
+.back-btn-sidebar {
+  display: flex;
+  justify-content: end;
+}
 #close-btn {
-  margin-bottom: 40px;
-  color: red;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  color: gray;
+  font-size: 25px;
 }
 
-.head-links a {
-  margin: 20px 20px;
-  text-align: center;
-  display: block;
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.nav-links a {
   font-size: 20px;
   text-decoration: none;
   color: grey;
@@ -506,6 +547,55 @@ button:hover {
   background-color: transparent;
   border: none;
   color: black;
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    width: 600px;
+  }
+
+  .intro {
+    width: 500px;
+  }
+
+  .about-div {
+    width: 600px;
+  }
+  .about-img {
+    width: 500px;
+    padding: 10px;
+  }
+
+  .info p {
+    text-align: start;
+  }
+
+  .about-info img {
+    width: 180px;
+  }
+  .about-info {
+    width: 500px;
+  }
+  .myProjects {
+    width: 600px;
+  }
+  .project-details {
+    width: 600px;
+  }
+  #contact form {
+    width: 500px;
+  }
+
+  .about-head {
+    width: 600px;
+  }
+  .form {
+    width: 500px;
+  }
+
+  #contact {
+    padding: 5rem 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -529,14 +619,19 @@ button:hover {
     width: 350px;
   }
   .about-img {
-    width: 120px;
+    width: 350px;
+    padding: 10px;
   }
 
-  .about-img img {
-    width: 80px;
+  .info p {
+    text-align: start;
+  }
+
+  .about-info img {
+    width: 200px;
   }
   .about-info {
-    width: 220px;
+    width: 350px;
   }
   .myProjects {
     width: 350px;
@@ -547,6 +642,7 @@ button:hover {
   #contact form {
     width: 350px;
   }
+
   .about-head {
     width: 350px;
   }
@@ -559,5 +655,14 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 700px) {
+.overlay {
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
 }

@@ -5,13 +5,15 @@ const closebtn = document.getElementById('close-btn');
 const jumpbtns = document.querySelectorAll('#jump-btn');
 
 openbtn.addEventListener('click', () => {
-  showbtns.style.width = '250px';
+  showbtns.style.width = '300px';
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  document.querySelector('.overlay').style.display = 'block';
 });
 
 closebtn.addEventListener('click', () => {
   showbtns.style.width = '0';
   document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+  document.querySelector('.overlay').style.display = 'none';
 });
 
 function closeModal() {
@@ -30,4 +32,10 @@ document.addEventListener('keydown', function (e) {
     showbtns.style.width = '0';
     document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
   }
+});
+
+document.querySelector('.overlay').addEventListener('click', () => {
+  showbtns.style.width = '0';
+  document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+  document.querySelector('.overlay').style.display = 'none';
 });
