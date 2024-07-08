@@ -19,6 +19,7 @@ closebtn.addEventListener('click', () => {
 function closeModal() {
   showbtns.style.width = '0';
   document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+  document.querySelector('.overlay').style.display = 'none';
 }
 
 for (let i = 0; i < jumpbtns.length; i++)
@@ -31,6 +32,7 @@ document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
     showbtns.style.width = '0';
     document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
+    document.querySelector('.overlay').style.display = 'none';
   }
 });
 
