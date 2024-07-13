@@ -8,6 +8,7 @@ openbtn.addEventListener('click', () => {
   showbtns.style.width = '300px';
   document.getElementsByTagName('body')[0].style.overflow = 'hidden';
   document.querySelector('.overlay').style.display = 'block';
+  document.getElementById('myBtn').style.zIndex = 5;
 });
 
 closebtn.addEventListener('click', () => {
@@ -41,3 +42,26 @@ document.querySelector('.overlay').addEventListener('click', () => {
   document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
   document.querySelector('.overlay').style.display = 'none';
 });
+
+// go to top button
+let myBtn = document.getElementById('myBtn');
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 500 ||
+    document.documentElement.scrollTop > 500
+  ) {
+    myBtn.style.display = 'block';
+  } else {
+    myBtn.style.display = 'none';
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
