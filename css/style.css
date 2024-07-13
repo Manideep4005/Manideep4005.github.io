@@ -5,14 +5,42 @@
   transition-duration: 0.4s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   height: 100%;
   background-color: #f9f9f9;
 }
 
+/* Go to top button css */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: dodgerblue;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid dodgerblue;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+#myBtn:hover {
+  color: white;
+  background-color: dodgerblue;
+}
+
 .nav-btns {
-  background-color: white;
+  background-color: #f9f9f9;
   box-shadow: 0 0 10px gainsboro;
   display: flex;
   justify-content: space-between;
@@ -98,7 +126,6 @@ h3 {
 }
 
 #home {
-  /* background: #fffff7; */
   height: 100vh;
   display: flex;
   /* display: none; */
@@ -110,6 +137,18 @@ h3 {
   margin: auto;
   width: 700px;
   padding: 10px;
+}
+
+.social-media {
+  margin: 20px auto;
+  width: 300px;
+  padding: 10px;
+}
+
+.social-media a {
+  margin: 10px;
+  font-size: 20px;
+  color: #0077b5;
 }
 
 .about h1 {
@@ -154,7 +193,7 @@ h3 {
   justify-content: center;
   margin: auto;
   flex-direction: column-reverse;
-  background-color: #fffff7;
+
   border-radius: 5px;
   box-shadow: 0 0 10px gainsboro;
 }
@@ -216,6 +255,7 @@ h2 {
 .about-img {
   margin: 10px;
   width: 500px;
+  padding: 10px;
   margin: auto;
 }
 
@@ -413,7 +453,7 @@ textarea {
   outline: none;
 }
 
-button {
+#contact button {
   color: white;
   margin: 12px 0;
   display: block;
@@ -428,7 +468,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+#contact button:hover {
   background-color: #0087ca;
 }
 
@@ -455,6 +495,7 @@ button:hover {
   top: 0;
   display: none;
   transition: 0.4s;
+  padding: 15px;
 }
 
 .heads {
@@ -512,7 +553,7 @@ button:hover {
   left: 0;
   z-index: 10;
   overflow-x: hidden;
-  transition: margin-left, margin-right, 0.6s;
+  transition: 0.5s cubic-bezier(0.45, 0.45, 0.45, 0.45);
   padding-top: 20px;
   box-shadow: 0 0 10px gray;
   backdrop-filter: blur(10px);
@@ -530,15 +571,14 @@ button:hover {
 }
 
 .nav-links {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  gap: 30px;
+  padding: 10px;
 }
 
 .nav-links a {
   font-size: 20px;
+  display: block;
+  text-align: center;
+  margin: 25px auto;
   text-decoration: none;
   color: grey;
 }
@@ -551,11 +591,11 @@ button:hover {
 
 @media screen and (max-width: 900px) {
   .about {
-    width: 600px;
+    width: 800px;
   }
 
   .intro {
-    width: 500px;
+    width: 700px;
   }
 
   .about-div {
@@ -599,6 +639,16 @@ button:hover {
 }
 
 @media screen and (max-width: 700px) {
+  #myBtn {
+    border: none;
+    font-size: 25px;
+  }
+
+  #myBtn:hover {
+    color: dodgerblue;
+    background-color: transparent;
+  }
+
   .header {
     display: block;
   }
@@ -665,4 +715,18 @@ button:hover {
   display: none;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px gainsboro;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: dodgerblue;
 }
