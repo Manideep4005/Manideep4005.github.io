@@ -1,3 +1,25 @@
+:root {
+  --background: #fffff7;
+  --text: gray;
+  --headers: dodgerblue;
+  --name-header: rgb(34, 30, 30);
+  --copyright-bg: #cccc;
+  --copyright-text: black;
+  --moon: gray;
+  --sidebar-bg: white;
+}
+
+.dark {
+  --background: black;
+  --text: #fffff7;
+  --headers: dodgerblue;
+  --name-header: white;
+  --copyright-bg: #252424;
+  --copyright-text: #ccc;
+  --moon: limegreen;
+  --sidebar-bg: rgb(49, 49, 49);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,697 +34,37 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   height: 100%;
-  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background);
 }
 
 /* Go to top button css */
-#myBtn {
+
+.top-btn {
   display: none;
+  width: 40px;
+  height: 40px;
+  background-color: red;
   position: fixed;
   bottom: 50px;
   right: 20px;
-  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#myBtn {
+  z-index: 2;
   font-size: 18px;
   border: none;
   outline: none;
-  color: dodgerblue;
+  color: white;
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid dodgerblue;
-  padding: 10px;
-  border-radius: 50%;
   transition: 0.4s;
-}
-
-#myBtn:hover {
-  color: white;
-  background-color: dodgerblue;
-}
-
-.nav-btns {
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px gainsboro;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-}
-
-.btns {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.btns a {
-  display: inline-block;
-  position: relative;
-  color: #0087ca;
-}
-
-.btns a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: dodgerblue;
-  transform-origin: center;
-  transition: transform 0.25s ease-out;
-}
-
-.btns a:hover::after {
-  transform: scaleX(1);
-  transform-origin: center;
-}
-
-.btns a {
-  text-decoration: none;
-  color: gray;
-  font-size: 16px;
-}
-
-.fa-moon-o {
-  font-size: 20px;
-  color: gray;
-}
-
-.img {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-h3 {
-  margin-left: 10px;
-  font-size: 16px;
-  color: gray;
-}
-
-#view-photo {
-  width: 40px;
-  align-items: center;
-  border-radius: 50%;
-  margin-left: 20px;
-  /* cursor: pointer; */
-}
-
-.shape {
-  border: 2px solid gray;
-  margin-left: 20px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-#initial {
-  text-align: center;
-}
-
-#home {
-  height: 100vh;
-  display: flex;
-  /* display: none; */
-  justify-content: center;
-  align-items: center;
-}
-
-.about {
-  margin: auto;
-  width: 700px;
-  padding: 10px;
-}
-
-.social-media {
-  margin: 20px auto;
-  width: 300px;
-  padding: 10px;
-}
-
-.social-media a {
-  margin: 10px;
-  font-size: 20px;
-  color: #0077b5;
-}
-
-.about h1 {
-  text-align: center;
-  font-size: 40px;
-  letter-spacing: 2px;
-}
-
-.intro {
-  margin: 12px auto;
-  color: gray;
-  text-align: center;
-  width: 500px;
-  font-size: 16px;
-  padding: 10px;
-}
-
-#project {
-  display: block;
-  margin: 30px auto;
-  text-decoration: none;
-  background: dodgerblue;
-  color: white;
-  padding: 10px;
-  width: 120px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-#project:hover {
-  background-color: #0087ca;
-}
-
-#about-me {
-  padding: 5rem 0;
-  height: 100%;
-}
-
-.about-div {
-  width: 800px;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  flex-direction: column-reverse;
-
-  border-radius: 5px;
-  box-shadow: 0 0 10px gainsboro;
-}
-
-.about-head {
-  width: 800px;
-  margin: 12px auto;
-}
-
-#about-header {
-  font-size: 25px;
-  color: dodgerblue;
-}
-
-#tech {
-  margin-top: 18px;
-}
-
-#skills li {
-  list-style-position: inside;
-  display: inline-block;
-  padding: 5px;
-  color: gray;
-}
-
-.about-info h4 {
-  font-weight: 500;
-  color: dodgerblue;
-}
-
-hr {
-  border: none;
-  height: 0.5px;
-  margin: 10px 0;
-  background-color: gray;
-}
-
-h2 {
-  letter-spacing: 2px;
-}
-
-#bachelor {
-  color: black;
-  margin-top: 15px;
-}
-
-#mba {
-  color: black;
-}
-
-.info p {
-  margin-bottom: 20px;
-  font-size: 16px;
-  color: gray;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.about-img {
-  margin: 10px;
-  width: 500px;
-  padding: 10px;
-  margin: auto;
-}
-
-.about-img h4 {
-  color: dodgerblue;
-  font-weight: 500;
-}
-
-.about-info img {
-  width: 200px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px gainsboro;
-  margin: 20px auto;
-  display: block;
-  border: 2px solid gray;
-}
-
-.about-info {
-  margin: auto;
-  width: 500px;
-  padding: 10px;
-}
-
-.education p {
-  font-size: 16px;
-  margin: 2px 0;
-  color: gray;
-}
-
-.training {
-  margin-top: 20px;
-}
-
-#resume {
-  margin: 30px 0;
-}
-
-#resume-btn {
-  text-decoration: none;
-  color: dodgerblue;
-  background-color: transparent;
-  transition-duration: 0.4s;
-  font-size: 16px;
-  padding: 12px;
-  border-radius: 5px;
-  border: 2px solid dodgerblue;
-}
-
-#resume-btn:hover {
-  background-color: dodgerblue;
-  color: white;
-}
-
-.training p {
-  color: gray;
-}
-
-#projects {
-  height: 100%;
-  padding: 5rem 0;
-}
-
-.myProjects {
-  width: 800px;
-  margin: 8px auto;
-  text-align: left;
-}
-
-.myProjects h2 {
-  letter-spacing: normal;
-  color: dodgerblue;
-  margin-bottom: 20px;
-}
-
-.project-details {
-  width: 800px;
-  margin: 12px auto;
-  box-shadow: 0 0 10px gainsboro;
-  border-radius: 5px;
-  padding: 20px;
-  background-color: #fffff7;
-}
-
-.project-details h4 {
-  color: dodgerblue;
-}
-
-.project-details > ul > li {
-  padding: 5px 0;
-  list-style-type: none;
-  list-style-position: inside;
-  color: gray;
-}
-
-.used {
-  margin-top: 10px;
-}
-
-#proj > li {
-  list-style-position: inside;
-  display: inline-block;
-  padding: 5px;
-  color: gray;
-}
-
-#github-link {
-  display: block;
-  text-decoration: none;
-  padding: 12px;
-  background: dodgerblue;
-  width: 100px;
-  margin-top: 12px;
-  text-align: center;
-  border-radius: 5px;
-  color: white;
-}
-
-#github-link:hover {
-  background-color: #0087ca;
-}
-
-#contact {
-  /* background: #fffff7; */
-  height: 100vh;
-  padding: 6rem 0;
-}
-
-#form {
-  width: 800px;
-  margin: 25px auto;
-  box-shadow: 0 0 10px gainsboro;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: #fffff7;
-}
-
-.form {
-  width: 800px;
-  margin: auto;
-}
-
-.links {
-  width: 300px;
-  margin: 10px 0;
-  display: flex;
-}
-
-.links a {
-  margin: 0 5px;
-  font-size: 20px;
-  border: 2px solid #4b5c77;
-  padding: 10px;
-  border-radius: 8px;
-  color: white;
-  background: #4b5c77;
-}
-
-#contact h4 {
-  text-align: left;
-  font-size: 24px;
-  color: dodgerblue;
-}
-
-#contact form input {
-  color: gray;
-  margin: 12px 0;
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  transition: 0.4s;
-  border: 2px solid gray;
-  border-radius: 5px;
-  background-color: transparent;
-  outline: none;
-}
-
-#contact form input:focus,
-textarea:focus {
-  border-color: #0077b5;
-}
-
-textarea {
-  resize: none;
-  color: gray;
-  margin: 12px 0;
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  transition: 0.4s;
-  border: 2px solid gray;
-  border-radius: 5px;
-  background-color: transparent;
-  outline: none;
-}
-
-#contact button {
-  color: white;
-  margin: 12px 0;
-  display: block;
-  width: 100%;
-  padding: 12px;
-  font-size: 18px;
-  transition: 0.4s;
-  border: 2px solid dodgerblue;
-  border-radius: 5px;
-  background-color: dodgerblue;
-  outline: none;
-  cursor: pointer;
-}
-
-#contact button:hover {
-  background-color: #0087ca;
-}
-
-#copyright {
-  background-color: #ccc;
-  position: sticky;
-  bottom: 0;
-  padding: 10px;
-}
-
-.text {
-  font-size: 10px;
-  text-align: center;
-  color: black;
-}
-
-/* ---------------------------------------------------------------*/
-/* Styling of haeder width below 700px */
-
-.header {
-  box-shadow: 0 0px 10px -1px gray;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  display: none;
-  transition: 0.4s;
-  padding: 15px;
-}
-
-.heads {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.username {
-  justify-content: center;
-  border: 2px solid gray;
-  display: flex;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-  padding: 5px;
-  border-radius: 50%;
-  color: black;
-}
-
-#username {
-  color: black;
-}
-
-.head-1 {
-  margin-left: 20px;
-}
-
-.head-2 {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  gap: 20px;
-}
-
-.fa-bars {
-  font-size: 24px;
-  cursor: pointer;
-  color: grey;
-}
-
-.head-links img {
-  width: 100px;
-  border-radius: 50%;
-  margin: auto;
-  display: block;
-}
-
-.head-links {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  background-color: white;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  overflow-x: hidden;
-  transition: 0.5s cubic-bezier(0.45, 0.45, 0.45, 0.45);
-  padding-top: 20px;
-  box-shadow: 0 0 10px gray;
-  backdrop-filter: blur(10px);
-}
-
-.back-btn-sidebar {
-  display: flex;
-  justify-content: end;
-}
-#close-btn {
-  margin-bottom: 20px;
-  margin-right: 20px;
-  color: gray;
-  font-size: 25px;
-}
-
-.nav-links {
-  padding: 10px;
-}
-
-.nav-links a {
-  font-size: 20px;
-  display: block;
-  text-align: center;
-  margin: 25px auto;
-  text-decoration: none;
-  color: grey;
-}
-
-.head-1 button {
-  background-color: transparent;
-  border: none;
-  color: black;
-}
-
-@media screen and (max-width: 900px) {
-  .about {
-    width: 800px;
-  }
-
-  .intro {
-    width: 700px;
-  }
-
-  .about-div {
-    width: 600px;
-  }
-  .about-img {
-    width: 500px;
-    padding: 10px;
-  }
-
-  .info p {
-    text-align: start;
-  }
-
-  .about-info img {
-    width: 180px;
-  }
-  .about-info {
-    width: 500px;
-  }
-  .myProjects {
-    width: 600px;
-  }
-  .project-details {
-    width: 600px;
-  }
-  #contact form {
-    width: 500px;
-  }
-
-  .about-head {
-    width: 600px;
-  }
-  .form {
-    width: 500px;
-  }
-
-  #contact {
-    padding: 5rem 0;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  #myBtn {
-    border: none;
-    font-size: 25px;
-  }
-
-  #myBtn:hover {
-    color: dodgerblue;
-    background-color: transparent;
-  }
-
-  .header {
-    display: block;
-  }
-
-  .nav-btns {
-    display: none;
-  }
-
-  .about {
-    width: 350px;
-  }
-
-  .intro {
-    width: 300px;
-  }
-
-  .about-div {
-    width: 350px;
-  }
-  .about-img {
-    width: 350px;
-    padding: 10px;
-  }
-
-  .info p {
-    text-align: start;
-  }
-
-  .about-info img {
-    width: 200px;
-  }
-  .about-info {
-    width: 350px;
-  }
-  .myProjects {
-    width: 350px;
-  }
-  .project-details {
-    width: 350px;
-  }
-  #contact form {
-    width: 350px;
-  }
-
-  .about-head {
-    width: 350px;
-  }
-  .form {
-    width: 350px;
-  }
-
-  #contact {
-    padding: 5rem 0;
-  }
 }
 
 .overlay {
@@ -713,12 +75,13 @@ textarea {
   top: 0;
   left: 0;
   display: none;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
+  height: 5px;
 }
 
 /* Track */
@@ -729,4 +92,531 @@ textarea {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: dodgerblue;
+}
+
+/* My Photo modal  */
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.01);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 1px gainsboro;
+  width: 350px;
+  margin: auto;
+  position: fixed;
+  overflow-x: visible !important;
+  z-index: 10;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px;
+  display: none;
+  flex-direction: column;
+  transition: 0.4s;
+}
+
+.img-modal > img {
+  width: 200px;
+  display: block;
+  margin: auto;
+  backdrop-filter: drop;
+  border-radius: 50%;
+}
+
+.close-img > p {
+  display: block;
+  float: right;
+  font-size: 25px;
+  color: white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.close-img > p:hover {
+  color: red;
+  transform: rotate(360deg);
+}
+
+#my-img {
+  cursor: pointer;
+}
+
+/* Styling up the whole body */
+
+.header-1 {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--background);
+  box-shadow: 0 0 8px 0px gainsboro;
+  margin-bottom: 10px;
+}
+
+.header-1 > div {
+  margin-left: 20px;
+}
+
+.header-1 > nav {
+  margin-right: 20px;
+}
+
+.shape img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav > ul > li > a {
+  text-decoration: none;
+  font-size: 17px;
+  color: var(--text);
+  display: inline-block;
+  position: relative;
+}
+
+nav > ul > li > a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: dodgerblue;
+  transform-origin: center;
+  transition: 0.4s;
+}
+
+nav > ul > li > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+#dark,
+#dark-2 {
+  cursor: pointer;
+  color: var(--moon);
+  font-size: 20px;
+}
+
+/* HEADER 2  */
+
+.header-2 {
+  position: sticky;
+  top: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--background);
+  box-shadow: 0 0 8px 0px gainsboro;
+  margin-bottom: 10px;
+}
+
+.shape-header2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.shape-header2 ul > li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.shape-header2 img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.shape-header2 a {
+  font-size: 50px;
+}
+
+.sidebar-open button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SIDE BAR PANEL */
+
+.sidebar {
+  background: var(--sidebar-bg);
+  width: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s cubic-bezier(0.45, 0.45, 0.45, 0.45);
+  position: fixed;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  transition: 0.4s;
+}
+
+.close-sidebar {
+  padding: 10px;
+  margin: 30px 10px;
+}
+
+.close-sidebar a {
+  float: right;
+  font-size: 20px;
+  color: var(--text);
+}
+
+.sidebar-links {
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.sidebar-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.sidebar-links ul > li {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.sidebar-links ul > li > a {
+  color: var(--text);
+  text-decoration: none;
+  transition: 0.4s;
+  display: inline-block;
+  position: relative;
+}
+
+.sidebar-links ul > li > a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: dodgerblue;
+  transform-origin: center;
+  transition: 0.4s;
+}
+
+.sidebar-links ul > li > a:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* Home Section */
+
+.Home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.Home > div {
+  max-width: 700px;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px gainsboro;
+}
+
+.Home > div > h1 {
+  font-size: 40px;
+  margin: 10px 0;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--name-header);
+}
+
+.Home > div > p {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.social {
+  display: flex;
+  margin: 20px 0;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social > a {
+  font-size: 20px;
+  color: var(--text);
+}
+
+.resume {
+  max-width: 200px;
+  margin: auto;
+}
+
+.resume a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border: 2px solid dodgerblue;
+  background-color: transparent;
+  padding: 12px;
+  color: dodgerblue;
+  transition: 0.4s;
+}
+
+.resume a:hover {
+  color: white;
+  background-color: dodgerblue;
+}
+
+/* About me Section */
+
+.about-me {
+  height: 100%;
+  padding: 6rem 1rem;
+}
+
+.about {
+  padding: 10px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px gainsboro;
+}
+
+.about-head {
+  margin: 10px 0 20px 0;
+  color: var(--headers);
+}
+
+.about h3 {
+  margin: 12px 0;
+  color: var(--headers);
+}
+
+.about h4 {
+  margin-top: 12px;
+}
+
+.about p,
+h4 {
+  color: var(--text);
+}
+
+.introduction,
+.education,
+.skills,
+.training-details,
+.tools {
+  padding: 20px;
+}
+
+.skills ul > li,
+.tools ul > li {
+  list-style-position: inside;
+  display: inline-block;
+  padding: 5px;
+  color: var(--text);
+}
+
+.about-hr {
+  border: none;
+  height: 1px;
+  background-color: var(--text);
+  margin-bottom: 10px;
+}
+
+/* PROJECTS SECTION */
+
+.projects {
+  padding: 6rem 1rem;
+  height: 100%;
+}
+
+.project {
+  padding: 10px 30px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 1px gainsboro;
+}
+
+.project-head {
+  margin: 10px 0 20px 0;
+  color: var(--headers);
+}
+
+.project-tabs {
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0 0 0 1px gainsboro;
+}
+
+.project-tabs .used {
+  margin-top: 10px;
+}
+
+.project-tabs > h4 {
+  color: var(--headers);
+}
+
+.project-hr {
+  border: none;
+  height: 1px;
+  background-color: var(--text);
+  margin: 10px 0;
+}
+
+.project-tabs ul > li {
+  list-style-type: none;
+  padding: 10px;
+  color: var(--text);
+}
+
+#proj > li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.project-tabs a {
+  display: block;
+  width: 80px;
+  margin: 10px 0;
+  margin-left: 10px;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid dodgerblue;
+  padding: 10px;
+  color: dodgerblue;
+  background: transparent;
+  transition: 0.4s;
+}
+
+.project-tabs a:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* CONTACT ME SECTIOn */
+
+.contact-me {
+  padding: 5rem 1rem;
+  height: 100%;
+}
+
+.contact {
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px gainsboro;
+}
+
+.contact-head {
+  margin: 10px 0 20px 0;
+  color: var(--headers);
+}
+
+.contact-form {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-form > form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form > form > input,
+.contact-form > form > textarea {
+  padding: 12px;
+  font-size: 17px;
+  color: var(--text);
+  outline: none;
+  border: none;
+  box-shadow: 0 0 0 1px dodgerblue;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text);
+}
+
+.contact-form > form > input:hover,
+.contact-form > form > textarea:hover {
+  box-shadow: 0 0 5px 1px dodgerblue;
+}
+
+.contact-form > form > input:focus,
+.contact-form > form > textarea:focus {
+  box-shadow: 0 0 0 2px dodgerblue;
+}
+
+.contact-form > form > button {
+  padding: 12px;
+  font-size: 17px;
+  color: white;
+  outline: none;
+  background-color: dodgerblue;
+  border: 2px solid dodgerblue;
+  border-radius: 5px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.contact-form > form > button:hover {
+  background-color: #3de397;
+  border-color: #3de397;
+}
+
+.contact-form > form > textarea {
+  resize: none;
+}
+
+/* COPYRIGHT SECTION */
+.copyright {
+  background-color: var(--copyright-bg);
+  position: sticky;
+  bottom: 0;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.copyright p {
+  font-size: 13px;
+  text-align: center;
+  color: var(--copyright-text);
+}
+
+@media screen and (max-width: 700px) {
+  .header-1 {
+    display: none;
+  }
+
+  .header-2 {
+    display: flex;
+  }
 }
