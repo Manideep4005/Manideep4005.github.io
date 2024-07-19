@@ -11,379 +11,420 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="image/logo.png" type="image/png" />
   </head>
   <body>
-    <div class="header" id="header">
-      <div class="heads">
-        <div class="head-1">
-          <button id="open-btn" class="sidepanel-button">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
-        <div class="head-2">
-          <div class="username"><p id="intital-name">MN</p></div>
-        </div>
+    <!-- Header  -->
+
+    <header class="header-1">
+      <div class="shape">
+        <img src="image/Manideep.JPG" id="my-img" />
       </div>
-    </div>
+      <nav>
+        <ul>
+          <li><a href="#Home">HOME</a></li>
+          <li><a href="#about-me">ABOUT ME</a></li>
+          <li><a href="#PROJECTS">PROJECTS</a></li>
+          <li><a href="#CONTACT">CONTACT</a></li>
+          <li>
+            <a id="dark"><i class="fa fa-moon-o"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- Go TO TOP BUTTON  -->
-    <button id="myBtn" title="Go to Top" onclick="topFunction()">
-      <i class="fa fa-arrow-up"></i>
-    </button>
+    <!-- Header for  Side Bar  -->
 
-    <div class="head-links" id="head-links">
-      <div class="back-btn-sidebar">
-        <a href="javascript:void(0)"
-          ><i class="fa fa-arrow-left" id="close-btn"></i
+    <header class="header-2">
+      <div class="sidebar-open">
+        <button id="open-sidebar"><i class="fa fa-bars"></i></button>
+      </div>
+      <div class="shape-header2">
+        <img src="image/Manideep.JPG" id="my-img" />
+        <ul>
+          <li>
+            <a id="dark"><i class="fa fa-moon-o"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Side Bar -->
+
+    <div class="sidebar">
+      <div class="close-sidebar">
+        <a href="javascript::void(0)" id="sidebar-close"
+          ><i class="fa fa-arrow-left"></i
         ></a>
       </div>
-      <div class="nav-links">
+      <div class="sidebar-links">
+        <ul>
+          <li><a href="#Home" id="sidebar-btns">HOME</a></li>
+          <li><a href="#about-me" id="sidebar-btns">ABOUT ME</a></li>
+          <li><a href="#PROJECTS" id="sidebar-btns">PROJECTS</a></li>
+          <li><a href="#CONTACT" id="sidebar-btns">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- MY PHOTO MODAL -->
+
+    <div class="modal">
+      <div class="close-img">
+        <p id="close-img-btn"><i class="fa fa-close"></i></p>
+      </div>
+      <div class="img-modal">
         <img src="image/Manideep.JPG" alt="" />
-        <a href="#home" id="jump-btn">HOME</a>
-        <a href="#about-me" id="jump-btn">ABOUT ME</a>
-        <a href="#projects" id="jump-btn">PROJECTS</a>
-        <a href="#contact" id="jump-btn">CONTACT</a>
       </div>
     </div>
 
-    <div class="nav-btns">
-      <div class="img">
-        <div class="shape"><p id="initial">MN</p></div>
-      </div>
+    <!-- Home Section -->
 
-      <div class="btns">
-        <a href="#home">HOME</a>
-        <a href="#about-me">ABOUT ME</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-      </div>
-    </div>
+    <section class="Home" id="Home">
+      <div>
+        <h1>HEY, I'M MANIDEEP NAKKA</h1>
+        <p>
+          A passionate Software Developer eager to embark on my journey in the
+          world of software development. Armed with a solid foundation in Java
+          programming and Web Technologies, I am excited to contribute fresh
+          ideas and skills to innovative projects.
+        </p>
 
-    <section id="home">
-      <div class="about">
-        <h1 id="myName">HEY, I'M MANIDEEP NAKKA</h1>
-        <div class="intro">
-          <p>
-            A passionate Software Developer eager to embark on my journey in the
-            world of software development. Armed with a solid foundation in Java
-            programming and Web Technologies, I am excited to contribute fresh
-            ideas and skills to innovative projects.
-          </p>
-          <div class="social-media">
-            <a href="https://www.linkedin.com/in/manideepnakka" target="_blank"
-              ><i class="fa fa-linkedin"></i
-            ></a>
-            <a target="_blank" href="https://github.com/Manideep4005"
-              ><i class="fa fa-github"></i
-            ></a>
-          </div>
-          <!-- <a href="#projects" id="project">PROJECTS</a> -->
+        <div class="social">
+          <a href="https://www.linkedin.com/in/manideepnakka" target="_blank">
+            <i class="fa fa-linkedin"></i> </a
+          ><a href="https://github.com/Manideep4005" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+
+        <div class="resume">
+          <a href="view_resume.html" class="resume_btn" target="_blank"
+            >View my Resume <i class="fa fa-arrow-right"></i
+          ></a>
         </div>
       </div>
     </section>
 
-    <section id="about-me">
-      <div class="about-head">
-        <h4 id="about-header">ABOUT ME</h4>
-      </div>
-      <div class="about-div">
-        <div class="about-img">
-          <h4 id="tech">TECHNICAL SKILLS</h4>
-          <hr />
-          <ul id="skills">
-            <li>Java</li>
-            <li>MySQL</li>
-            <li>Oracle</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-            <li>Maven</li>
-            <li>Hibernate</li>
-            <li>Spring MVC</li>
-            <li>Spring Boot</li>
-            <li>RESTful Web Services</li>
-            <li>Object Oriented Programming</li>
-            <li>Software Development Lifecycle</li>
-          </ul>
+    <!-- ABOUT ME SECTION -->
 
-          <h4 id="tech">TOOLS</h4>
-          <hr />
-          <ul id="skills">
-            <li>Eclipse</li>
-            <li>Vs Code</li>
-            <li>Postman</li>
-          </ul>
+    <section class="about-me" id="about-me">
+      <div class="about">
+        <div class="about-head"><h2>ABOUT ME</h2></div>
+        <div class="introduction">
+          <h3>INTRODUCTION</h3>
+          <hr class="about-hr" />
+          <p>
+            I am a recent MBA Finance graduate with a keen interest in blending
+            financial expertise with technical skills. In addition to my finance
+            background, I have a proficient knowledge of Java Programming and
+            it's Frameworks like Spring and Hibernate and web technologies. I am
+            passionate about leveraging technology to streamline financial
+            processes and enhance decision-making efficiency. As a dedicated
+            learner, I am enthusiastic about exploring opportunities where I can
+            apply my combined skills to contribute effectively to the dynamic
+            fields of finance and technology.
+          </p>
         </div>
-        <div class="about-info">
-          <div class="info">
-            <img src="image/Manideep.JPG" />
-            <h4>INTRODUCTION</h4>
-            <hr />
-            <p>
-              I am a recent MBA Finance graduate with a keen interest in
-              blending financial expertise with technical skills. In addition to
-              my finance background, I have a proficient knowledge of Java
-              Programming and it's Frameworks like Spring and Hibernate and web
-              technologies. I am passionate about leveraging technology to
-              streamline financial processes and enhance decision-making
-              efficiency. As a dedicated learner, I am enthusiastic about
-              exploring opportunities where I can apply my combined skills to
-              contribute effectively to the dynamic fields of finance and
-              technology.
-            </p>
-            <div id="resume">
-              <a href="view_resume.html" id="resume-btn" target="_blank"
-                >View My Resume <i class="fa fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="education">
-            <h4>EDUCATION</h4>
-            <hr />
-            <h4 id="mba">
-              Master of Business Administration (Finance)<br />2020-2022
-            </h4>
+        <div class="education">
+          <h3>EDUCATION</h3>
+          <hr class="about-hr" />
+          <div id="education">
+            <h4>Master of Business Administration (FINANCE) <br />2020-2022</h4>
             <p>Sri Indu P.G College</p>
             <p>6.59 GPA</p>
-            <h4 id="bachelor">
-              Bachelor of Commerce (Computers)<br />
-              2017-2020
-            </h4>
+          </div>
+          <div id="education">
+            <h4>Bachelor of Commerce (COMPUTERS) <br />2017-2020</h4>
             <p>Arunodaya Degree College</p>
             <p>7.83 GPA</p>
           </div>
+        </div>
 
-          <div class="training">
-            <h4>TRAINING DETAILS</h4>
-            <hr />
-            <p>
-              Trained on Java for a period of 6 months were worked on tools
-              eclipse and tomcat server.
-            </p>
+        <div class="training-details">
+          <h3>TRAINING DETAILS</h3>
+          <hr class="about-hr" />
+          <p>
+            Trained on Java for a period of 6 months were worked on tools
+            eclipse and tomcat server.
+          </p>
+        </div>
+
+        <div class="skills">
+          <h3>TECHNICAL SKILLS</h3>
+          <hr class="about-hr" />
+          <div class="tech-skills">
+            <ul>
+              <li>Java</li>
+              <li>MySQL</li>
+              <li>Oracle DB</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Spring MVC</li>
+              <li>Hibernate</li>
+              <li>Maven</li>
+              <li>Spring Boot</li>
+              <li>RESTful Web Services</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tools">
+          <h3>TOOLS</h3>
+          <hr class="about-hr" />
+          <div class="tech-tools">
+            <ul>
+              <li>Eclipse IDE</li>
+              <li>Visual Studio Code</li>
+              <li>Postman</li>
+              <li>Tomcat Server</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="myProjects">
-        <h2>PROJECTS</h2>
-      </div>
+    <!-- PROJECTS SECTION -->
 
-      <div class="project-details">
-        <h4>HOSPITAL MANAGEMENT SYSTEM</h4>
-        <hr />
-        <ul>
-          <li>
-            The project HMS is developed to create a user friendly web
-            application offering features like register and login.
-          </li>
-          <li>
-            The project has total of 3 panels User, Admin and Doctor where the 3
-            panels have features of CURD operations to perform on their
-            profiles.
-          </li>
-          <li>
-            Enabled Session to track the user login and logout status using
-            session objects. Used MySQL for data storage
-          </li>
-          <li>
-            User can book an appointment and also check the availability of
-            doctors.
-          </li>
-          <li>
-            Doctor has the previliges of accessing the patient data whose having
-            his appointment.
-          </li>
-          <li>
-            Admin manages the Management module where admin can do the retrieval
-            of data and many more...
-          </li>
-        </ul>
-        <h4 class="used">Technologies Used</h4>
-        <hr />
-        <ul id="proj">
-          <li>Java</li>
-          <li>Servlets</li>
-          <li>JSP</li>
-          <li>MySQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>SMTP</li>
-          <li>JavaScript</li>
-          <li>Eclipse IDE</li>
-        </ul>
+    <section class="projects" id="PROJECTS">
+      <div class="project">
+        <div class="project-head"><h2>PROJECTS</h2></div>
+        <div class="project-tabs">
+          <h4>HOSPITAL MANAGEMENT SYSTEM</h4>
+          <hr class="project-hr" />
+          <ul>
+            <li>
+              The project HMS is developed to create a user friendly web
+              application offering features like register and login.
+            </li>
+            <li>
+              The project has total of 3 panels User, Admin and Doctor where the
+              3 panels have features of CURD operations to perform on their
+              profiles.
+            </li>
+            <li>
+              Enabled Session to track the user login and logout status using
+              session objects. Used MySQL for data storage
+            </li>
+            <li>
+              User can book an appointment and also check the availability of
+              doctors.
+            </li>
+            <li>
+              Doctor has the previliges of accessing the patient data whose
+              having his appointment.
+            </li>
+            <li>
+              Admin manages the Management module where admin can do the
+              retrieval of data and many more...
+            </li>
+          </ul>
+          <h4 class="used">Technologies Used</h4>
+          <hr class="project-hr" />
+          <ul id="proj">
+            <li>Java</li>
+            <li>Servlets</li>
+            <li>JSP</li>
+            <li>MySQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SMTP</li>
+            <li>JavaScript</li>
+            <li>Eclipse IDE</li>
+          </ul>
 
-        <a
-          href="https://github.com/Manideep4005/HospitalManagementSystem"
-          id="github-link"
-          target="_blank"
-          >GitHub</a
-        >
-      </div>
+          <a
+            href="https://github.com/Manideep4005/HospitalManagementSystem"
+            id="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
 
-      <div class="project-details">
-        <h4>USER AUTHENTICATION</h4>
-        <hr />
-        <ul>
-          <li>
-            A Login Authentication application developed for security purpose.
-            When a User creates an account a unique hash token will be generated
-            and stored in database.
-          </li>
+        <div class="project-tabs">
+          <h4>USER AUTHENTICATION</h4>
+          <hr class="project-hr" />
+          <ul>
+            <li>
+              A Login Authentication application developed for security purpose.
+              When a User creates an account a unique hash token will be
+              generated and stored in database.
+            </li>
 
-          <li>
-            Hash token is generated using Secure Random class in Java with
-            Base64 Encoder which used to convert byte array to hash String.
-          </li>
-          <li>
-            Initally, the user account will be set to disbaled status, after
-            creating an account a hash token will be append to the url and send
-            to the user via mail.
-          </li>
+            <li>
+              Hash token is generated using Secure Random class in Java with
+              Base64 Encoder which used to convert byte array to hash String.
+            </li>
+            <li>
+              Initally, the user account will be set to disbaled status, after
+              creating an account a hash token will be append to the url and
+              send to the user via mail.
+            </li>
 
-          <li>
-            The user need to acitvate their account by clicking the link with
-            hashtoken which verifies the user identity and set account status to
-            active
-          </li>
-        </ul>
+            <li>
+              The user need to acitvate their account by clicking the link with
+              hashtoken which verifies the user identity and set account status
+              to active
+            </li>
+          </ul>
 
-        <h4 class="used">Technologies Used</h4>
-        <hr />
-        <ul id="proj">
-          <li>Java</li>
-          <li>MySQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Maven</li>
-          <li>Spring MVC</li>
-          <li>Hibernate</li>
-          <li>SMTP</li>
-        </ul>
-        <a
-          href="https://github.com/Manideep4005/AuthenticateUser"
-          id="github-link"
-          target="_blank"
-          >GitHub</a
-        >
-      </div>
+          <h4 class="used">Technologies Used</h4>
+          <hr class="project-hr" />
+          <ul id="proj">
+            <li>Java</li>
+            <li>MySQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Maven</li>
+            <li>Spring MVC</li>
+            <li>Hibernate</li>
+            <li>SMTP</li>
+          </ul>
+          <a
+            href="https://github.com/Manideep4005/AuthenticateUser"
+            id="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
 
-      <div class="project-details">
-        <h4>RESTAURANT MANAGEMENT SYSTEM</h4>
-        <hr />
-        <ul>
-          <li>
-            A web based application having of two modules user and admin. The
-            user can create an account and order the food.
-          </li>
-          <li>
-            The Menu is divided into categories to ease of access for ordering.
-          </li>
-          <li>
-            Added a feature add item to cart it shows the current items count in
-            the cart and also remove item form cart.
-          </li>
-          <li>
-            While checkout at cart the total list of items and its sub total and
-            total prices will be show to user before the user order.
-          </li>
-        </ul>
+        <div class="project-tabs">
+          <h4>RESTAURANT MANAGEMENT SYSTEM</h4>
+          <hr class="project-hr" />
+          <ul>
+            <li>
+              A web based application having of two modules user and admin. The
+              user can create an account and order the food.
+            </li>
+            <li>
+              The Menu is divided into categories to ease of access for
+              ordering.
+            </li>
+            <li>
+              Added a feature add item to cart it shows the current items count
+              in the cart and also remove item form cart.
+            </li>
+            <li>
+              While checkout at cart the total list of items and its sub total
+              and total prices will be show to user before the user order.
+            </li>
+          </ul>
 
-        <h4 class="used">Technologies Used</h4>
-        <hr />
-        <ul id="proj">
-          <li>Java</li>
-          <li>MySQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-        </ul>
+          <h4 class="used">Technologies Used</h4>
+          <hr class="project-hr" />
+          <ul id="proj">
+            <li>Java</li>
+            <li>MySQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
 
-        <a
-          href="https://github.com/Manideep4005/RestaurantManagementSystem"
-          id="github-link"
-          target="_blank"
-          >GitHub</a
-        >
-      </div>
+          <a
+            href="https://github.com/Manideep4005/RestaurantManagementSystem"
+            id="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
 
-      <div class="project-details">
-        <h4>STUDENT SYSTEM</h4>
-        <hr />
-        <ul>
-          <li>
-            A min web application used to store the student information in
-            database.
-          </li>
-          <li>
-            add a feature to perfrom CURD opertaions on student information and
-            as well as admin profile.
-          </li>
-        </ul>
-        <h4 class="used">Technologies Used</h4>
-        <hr />
-        <ul id="proj">
-          <li>Java</li>
-          <li>MySQL</li>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Maven</li>
-          <li>Spring MVC</li>
-          <li>Hibernate</li>
-        </ul>
-        <a
-          href="https://github.com/Manideep4005/StudentUserSystem"
-          id="github-link"
-          target="_blank"
-          >GitHub</a
-        >
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="form">
-        <h4>Get in Touch</h4>
-        <form action="https://formspree.io/f/meojqanp" method="POST" id="form">
-          <input
-            type="hidden"
-            name="_subject"
-            value="Contact request from personal website"
-          />
-
-          <input type="email" name="email" placeholder="Your Email" required />
-
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="10"
-            required
-          ></textarea>
-
-          <!-- your other form fields go here -->
-          <button type="submit">Send</button>
-        </form>
+        <div class="project-tabs">
+          <h4>STUDENT SYSTEM</h4>
+          <hr class="project-hr" />
+          <ul>
+            <li>
+              A min web application used to store the student information in
+              database.
+            </li>
+            <li>
+              add a feature to perfrom CURD opertaions on student information
+              and as well as admin profile.
+            </li>
+          </ul>
+          <h4 class="used">Technologies Used</h4>
+          <hr class="project-hr" />
+          <ul id="proj">
+            <li>Java</li>
+            <li>MySQL</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Maven</li>
+            <li>Spring MVC</li>
+            <li>Hibernate</li>
+          </ul>
+          <a
+            href="https://github.com/Manideep4005/StudentUserSystem"
+            id="github-link"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
       </div>
     </section>
 
-    <section id="copyright">
-      <div class="copyright-text">
-        <p class="text">
-          copyright <i class="fa fa-copyright"></i> 2024 Manideep Nakka, All
-          rights reserved
-        </p>
+    <!-- Contact me Section -->
+
+    <section class="contact-me" id="CONTACT">
+      <div class="contact">
+        <div class="contact-head">
+          <h2>Get in Touch</h2>
+        </div>
+
+        <div class="contact-form">
+          <form
+            action="https://formspree.io/f/meojqanp"
+            method="POST"
+            id="form"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Contact request from personal website"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="10"
+              required
+            ></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </section>
+
+    <!-- COPY RIGHT SECTION -->
+
+    <div class="copyright">
+      <p>
+        copyright <i class="fa fa-copyright"></i> Manideep Nakka, All Rights
+        Reserved
+      </p>
+    </div>
+
+    <!-- Go TO TOP BUTTON  -->
+    <div class="top-btn" title="Go to Top">
+      <button id="myBtn" onclick="topFunction()">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+    </div>
 
     <div class="overlay"></div>
 
     <script src="js/script.js"></script>
-    <script></script>
   </body>
 </html>
