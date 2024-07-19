@@ -13,7 +13,6 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="image/logo.png" type="image/png" />
-
     <style>
       object {
         width: 500px;
@@ -37,37 +36,26 @@
           height: 450px;
           width: 350px;
         }
+
+        .header-1 {
+          display: flex;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="header" id="header">
-      <div class="heads">
-        <div class="head-1">
-          <button id="open-btn"><i class="fa fa-bars"></i></button>
-        </div>
-        <div class="head-2">
-          <div class="username"><p>MN</p></div>
-        </div>
-      </div>
-    </div>
+    <!-- Header  -->
 
-    <div class="head-links" id="head-links">
-      <a href="javascript:void(0)"
-        ><i class="fa fa-close" id="close-btn"></i
-      ></a>
-      <a href="portfolio.html" id="jump-btn">BACK</a>
-    </div>
-
-    <div class="nav-btns">
-      <div class="img">
-        <div class="shape"><p id="initial">MN</p></div>
+    <header class="header-1">
+      <div class="shape">
+        <img src="image/Manideep.JPG" id="my-img" />
       </div>
-
-      <div class="btns">
-        <a href="portfolio.html">BACK</a>
-      </div>
-    </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">BACK</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <object data="resume/MANIDEEP NAKKA RESUME.pdf" type=""></object>
 
@@ -75,5 +63,7 @@
       Unable to view pdf?
       <a href="resume/MANIDEEP NAKKA RESUME.pdf" download>Download Here</a>
     </p>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
