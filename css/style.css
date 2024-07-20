@@ -523,7 +523,7 @@ h4 {
 /* CONTACT ME SECTIOn */
 
 .contact-me {
-  padding: 5rem 1rem;
+  padding: 2rem 1rem;
   height: 100%;
 }
 
@@ -548,7 +548,7 @@ h4 {
 .contact-form > form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .contact-form > form > input,
