@@ -16,421 +16,452 @@
     <link rel="icon" href="image/logo.png" type="image/png" />
   </head>
   <body>
-    <!-- Header  -->
-
-    <header class="header-1">
-      <div class="shape">
-        <img src="image/Manideep.JPG" id="my-img" />
-      </div>
+    <header>
       <nav>
-        <ul>
-          <li><a href="#Home">HOME</a></li>
-          <li><a href="#about-me">ABOUT ME</a></li>
-          <li><a href="#PROJECTS">PROJECTS</a></li>
-          <li><a href="#CONTACT">CONTACT</a></li>
-          <li>
-            <a id="dark"><i class="fa fa-moon-o"></i></a>
-          </li>
-        </ul>
+        <div class="sub-head-1">
+          <p>MN</p>
+          <h4>Manideep Nakka</h4>
+        </div>
+        <div class="sub-head-2">
+          <ul>
+            <li class="header_nav_btns"><a href="#HOME">HOME</a></li>
+            <li class="header_nav_btns"><a href="#ABOUT">ABOUT ME</a></li>
+            <li class="header_nav_btns"><a href="#PROJECTS">PROJECTS</a></li>
+            <li class="header_nav_btns"><a href="#CONTACT">CONTACT</a></li>
+            <li class="header_sidebar_btn" id="sidebar_open_btn">
+              <a><i class="fa fa-bars"></i></a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
-    <!-- Header for  Side Bar  -->
-
-    <header class="header-2">
-      <div class="sidebar-open">
-        <button id="open-sidebar"><i class="fa fa-bars"></i></button>
-      </div>
-      <div class="shape-header2">
-        <img src="image/Manideep.JPG" id="my-img" />
-        <ul>
-          <li>
-            <a id="dark"><i class="fa fa-moon-o"></i></a>
-          </li>
-        </ul>
-      </div>
-    </header>
-
-    <!-- Side Bar -->
-
+    <!-- SIDE BAR  -->
     <div class="sidebar">
-      <div class="close-sidebar">
-        <a href="javascript::void(0)" id="sidebar-close"
-          ><i class="fa fa-arrow-left"></i
-        ></a>
+      <div class="sidebar_1">
+        <a id="sidebar_close_btn"><i class="fa fa-close"></i></a>
       </div>
-      <div class="sidebar-links">
+      <div class="sidebar_2">
         <ul>
-          <li><a href="#Home" id="sidebar-btns">HOME</a></li>
-          <li><a href="#about-me" id="sidebar-btns">ABOUT ME</a></li>
-          <li><a href="#PROJECTS" id="sidebar-btns">PROJECTS</a></li>
-          <li><a href="#CONTACT" id="sidebar-btns">CONTACT</a></li>
+          <li class="sidebar_nav_btns"><a href="#HOME">HOME</a></li>
+          <li class="sidebar_nav_btns"><a href="#ABOUT">ABOUT ME</a></li>
+          <li class="sidebar_nav_btns"><a href="#PROJECTS">PROJECTS</a></li>
+          <li class="sidebar_nav_btns"><a href="#CONTACT">CONTACT</a></li>
         </ul>
       </div>
-    </div>
-
-    <!-- MY PHOTO MODAL -->
-
-    <div class="modal">
-      <div class="close-img">
-        <p id="close-img-btn"><i class="fa fa-close"></i></p>
-      </div>
-      <div class="img-modal">
-        <img src="image/Manideep.JPG" alt="" />
+      <div class="sidebar_3">
+        <p>
+          Copyright <i class="fa fa-copyright"></i> Maindeep Nakka,<br />
+          All Rights Reserved
+        </p>
       </div>
     </div>
 
     <main>
-      <!-- Home Section -->
-
-      <section class="Home" id="Home">
-        <div>
-          <h1>HEY, I'M MANIDEEP NAKKA</h1>
-          <p>
-            A passionate Software Developer eager to embark on my journey in the
-            world of software development. Armed with a solid foundation in Java
-            programming and Web Technologies, I am excited to contribute fresh
-            ideas and skills to innovative projects.
-          </p>
-
-          <div class="social">
-            <a href="https://www.linkedin.com/in/manideepnakka" target="_blank">
-              <i class="fa fa-linkedin"></i> </a
-            ><a href="https://github.com/Manideep4005" target="_blank">
-              <i class="fa fa-github"></i>
-            </a>
+      <!-- HOME SECTION -->
+      <section id="HOME">
+        <div class="home_parent_div">
+          <div class="home_photo">
+            <img src="image/Manideep.JPG" alt="Manideep Nakka Photo" />
           </div>
+          <div class="home_intro">
+            <h2>HEY, I'M MANIDEEP NAKKA</h2>
+            <p>
+              A passionate Developer eager to embark on my journey in the world
+              of software development. Armed with a solid foundation in Java
+              programming and Web Technologies, I am excited to contribute fresh
+              ideas and skills to innovative projects.
+            </p>
 
-          <div class="resume">
-            <a href="view_resume.html" class="resume_btn" target="_blank"
-              >View my Resume <i class="fa fa-arrow-right"></i
-            ></a>
+            <div class="resume">
+              <a href="view_resume.html" class="resume_btn" download
+                >View my Resume <i class="fa fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ABOUT ME SECTION -->
-
-      <section class="about-me" id="about-me">
-        <div class="about">
-          <div class="about-head"><h2>ABOUT ME</h2></div>
-          <div class="introduction">
-            <h3>INTRODUCTION</h3>
-            <hr class="about-hr" />
-            <p>
-              I am a recent MBA Finance graduate with a keen interest in
-              blending financial expertise with technical skills. In addition to
-              my finance background, I have a proficient knowledge of Java
-              Programming and it's Frameworks like Spring and Hibernate and web
-              technologies. I am passionate about leveraging technology to
-              streamline financial processes and enhance decision-making
-              efficiency. As a dedicated learner, I am enthusiastic about
-              exploring opportunities where I can apply my combined skills to
-              contribute effectively to the dynamic fields of finance and
-              technology.
-            </p>
-          </div>
-          <div class="education">
-            <h3>EDUCATION</h3>
-            <hr class="about-hr" />
-            <div id="education">
-              <h4>
-                Master of Business Administration (Finance) <br />2020-2022
-              </h4>
-              <p>Sri Indu P.G College</p>
-              <p>6.59 GPA</p>
+      <!-- ABOUT SECTION -->
+      <section id="ABOUT">
+        <div class="about_parent_div">
+          <div class="about_child_div">
+            <div class="about_intro">
+              <h2>About Me</h2>
+              <div>
+                <p>
+                  I am a passionate and driven individual with a strong
+                  foundation in Java programming and web technologies. Holding
+                  an MBA in Finance and a B.Com in Computers, I have developed a
+                  diverse skill set that bridges business and technical aspects.
+                </p>
+                <p>
+                  Currently focused on advancing my expertise in software
+                  development, particularly in Java, J2EE, and full-stack web
+                  development, I aim to apply my knowledge of data structures,
+                  algorithms, and industry-standard frameworks to create
+                  innovative, user-centric solutions.
+                </p>
+                <p>
+                  With hands-on experience in backend development,
+                  authentication mechanisms, and database management, I am
+                  always eager to learn and explore new areas of technology. As
+                  I seek opportunities in software development and data
+                  engineering, I look forward to collaborating with dynamic
+                  teams, contributing to impactful projects, and continually
+                  enhancing my skills to shape the future of technology.
+                </p>
+              </div>
             </div>
-            <div id="education">
-              <h4>Bachelor of Commerce (Computer Science) <br />2017-2020</h4>
-              <p>Arunodaya Degree College</p>
-              <p>7.83 GPA</p>
+
+            <div class="about_education">
+              <h2>Education</h2>
+
+              <div>
+                <div class="about_degree">
+                  <h4>MBA in Finance</h4>
+                  <p>Sri Indu P.G College - 2022</p>
+                  <p>6.59 GPA</p>
+                </div>
+
+                <div class="about_degree">
+                  <h4>B.Com in Computer Science</h4>
+                  <p>Arunodaya Degree College - 2020</p>
+                  <p>7.83 GPA</p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="training-details">
-            <h3>TRAINING DETAILS</h3>
-            <hr class="about-hr" />
-            <p>
-              Trained on Java for a period of 6 months were worked on tools
-              eclipse and tomcat server.
-            </p>
-          </div>
+            <div class="about_training">
+              <h2>Training Details</h2>
 
-          <div class="skills">
-            <h3>TECHNICAL SKILLS</h3>
-            <hr class="about-hr" />
-            <div class="tech-skills">
-              <ul>
-                <li>Java</li>
-                <li>MySQL</li>
-                <li>Oracle DB</li>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Spring MVC</li>
-                <li>Hibernate</li>
-                <li>Maven</li>
-                <li>Spring Boot</li>
-                <li>RESTful Web Services</li>
-              </ul>
+              <div>
+                <h3>6-Month Java Training</h3>
+                <p>360 Digrii | Hyderabad</p>
+                <p>
+                  Covered core Java concepts, object-oriented programming, data
+                  structures, algorithms, and industry-relevant frameworks.
+                  Focused on practical application and problem-solving to build
+                  strong coding and software development skills.
+                </p>
+              </div>
             </div>
-          </div>
 
-          <div class="tools">
-            <h3>TOOLS</h3>
-            <hr class="about-hr" />
-            <div class="tech-tools">
-              <ul>
-                <li>Eclipse IDE</li>
-                <li>Visual Studio Code</li>
-                <li>Postman</li>
-                <li>Tomcat Server</li>
-              </ul>
+            <div class="about_skills">
+              <h2>Technical Skills</h2>
+
+              <div>
+                <ul>
+                  <li>Java</li>
+                  <li>MySQL</li>
+                  <li>Oralce DB</li>
+                  <li>JavaScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>Spring Boot</li>
+                  <li>Hibernate</li>
+                  <li>JPA</li>
+                  <li>Maven</li>
+                  <li>RESTful API's</li>
+                  <li>Object Oriented Programming</li>
+                  <li>Software Development Life Cycle</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="about_training">
+              <h2>Training Details</h2>
+
+              <div>
+                <h3>6-Month Java Training</h3>
+                <p>360 Digrii | Hyderabad</p>
+                <p>
+                  Covered core Java concepts, object-oriented programming, data
+                  structures, algorithms, and industry-relevant frameworks.
+                  Focused on practical application and problem-solving to build
+                  strong coding and software development skills.
+                </p>
+              </div>
+            </div>
+
+            <div class="about_tools">
+              <h2>Tools</h2>
+
+              <div>
+                <ul>
+                  <li>Eclipse</li>
+                  <li>VS Code</li>
+                  <li>Postman</li>
+                  <li>Apache Tomcat Server</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <!-- PROJECTS SECTION -->
+      <section id="PROJECTS">
+        <div class="project_parent_div">
+          <h2>Projects</h2>
 
-      <section class="projects" id="PROJECTS">
-        <div class="project">
-          <div class="project-head"><h2>PROJECTS</h2></div>
-          <div class="project-tabs">
-            <h4>HOSPITAL MANAGEMENT SYSTEM</h4>
-            <hr class="project-hr" />
-            <ul>
-              <li>
-                The project HMS is developed to create a user friendly web
-                application offering features like register and login.
-              </li>
-              <li>
-                The project has total of 3 panels User, Admin and Doctor where
-                the 3 panels have features of CURD operations to perform on
-                their profiles.
-              </li>
-              <li>
-                Enabled Session to track the user login and logout status using
-                session objects. Used MySQL for data storage
-              </li>
-              <li>
-                User can book an appointment and also check the availability of
+          <div class="project_details">
+            <h2>Hospital Management System</h2>
+
+            <div class="project_intro">
+              Developed a comprehensive Hospital Management System to streamline
+              healthcare operations. Key features include: <br />
+              <p>
+                <strong>Patient Registration:</strong> Simplified form for
+                registering new patients with secure data storage.
+              </p>
+              <p>
+                <strong>Appointment Scheduling:</strong> Efficient scheduling
+                system ensuring seamless coordination between patients and
                 doctors.
-              </li>
-              <li>
-                Doctor has the previliges of accessing the patient data whose
-                having his appointment.
-              </li>
-              <li>
-                Admin manages the Management module where admin can do the
-                retrieval of data and many more...
-              </li>
-            </ul>
-            <h4 class="used">Technologies Used</h4>
-            <hr class="project-hr" />
-            <ul id="proj">
-              <li>Java</li>
-              <li>Servlets</li>
-              <li>JSP</li>
-              <li>MySQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>SMTP</li>
-              <li>JavaScript</li>
-              <li>Eclipse IDE</li>
-            </ul>
+              </p>
+              <p>
+                <strong>Medical Record Management:</strong> Organized database
+                for storing and retrieving patient medical histories.
+              </p>
+            </div>
 
-            <a
-              href="https://github.com/Manideep4005/HospitalManagementSystem"
-              id="github-link"
-              target="_blank"
-              >GitHub</a
-            >
+            <div class="project_tech_used">
+              <h2>Technologies Used</h2>
+              <div>
+                <ul>
+                  <li>Core Java</li>
+                  <li>Servlets</li>
+                  <li>JSP</li>
+                  <li>JavaScript</li>
+                  <li>MySQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>SMTP</li>
+                  <li>Eclipse IDE</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="github_link">
+              <a href="https://github.com/Manideep4005/HospitalManagementSystem"
+                >Github</a
+              >
+            </div>
           </div>
 
-          <div class="project-tabs">
-            <h4>USER AUTHENTICATION</h4>
-            <hr class="project-hr" />
-            <ul>
-              <li>
-                A Login Authentication application developed for security
-                purpose. When a User creates an account a unique hash token will
-                be generated and stored in database.
-              </li>
+          <div class="project_details">
+            <h2>User Authentication</h2>
 
-              <li>
-                Hash token is generated using Secure Random class in Java with
-                Base64 Encoder which used to convert byte array to hash String.
-              </li>
-              <li>
-                Initally, the user account will be set to disbaled status, after
-                creating an account a hash token will be append to the url and
-                send to the user via mail.
-              </li>
+            <div class="project_intro">
+              Designed and developed a secure user authentication system with
+              email verification for enhanced account safety. Key features
+              include: <br />
+              <p>
+                <strong>Account Creation:</strong> Users create accounts, but
+                login access is restricted until verification.
+              </p>
+              <p>
+                <strong>Email Verification:</strong> A hash token is sent to the
+                registered email for account activation.
+              </p>
+              <p>
+                <strong>Secure Login:</strong> Verified users can log in anytime
+                with secure session management.
+              </p>
+            </div>
 
-              <li>
-                The user need to acitvate their account by clicking the link
-                with hashtoken which verifies the user identity and set account
-                status to active
-              </li>
-            </ul>
+            <div class="project_tech_used">
+              <h2>Technologies Used</h2>
+              <div>
+                <ul>
+                  <li>Java</li>
+                  <li>MySQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Maven</li>
+                  <li>Spring MVC</li>
+                  <li>Hibernate</li>
+                  <li>SMTP</li>
+                </ul>
+              </div>
+            </div>
 
-            <h4 class="used">Technologies Used</h4>
-            <hr class="project-hr" />
-            <ul id="proj">
-              <li>Java</li>
-              <li>MySQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Maven</li>
-              <li>Spring MVC</li>
-              <li>Hibernate</li>
-              <li>SMTP</li>
-            </ul>
-            <a
-              href="https://github.com/Manideep4005/AuthenticateUser"
-              id="github-link"
-              target="_blank"
-              >GitHub</a
-            >
+            <div class="github_link">
+              <a href="https://github.com/Manideep4005/AuthenticateUser"
+                >Github</a
+              >
+            </div>
           </div>
 
-          <div class="project-tabs">
-            <h4>RESTAURANT MANAGEMENT SYSTEM</h4>
-            <hr class="project-hr" />
-            <ul>
-              <li>
-                A web based application having of two modules user and admin.
-                The user can create an account and order the food.
-              </li>
-              <li>
-                The Menu is divided into categories to ease of access for
-                ordering.
-              </li>
-              <li>
-                Added a feature add item to cart it shows the current items
-                count in the cart and also remove item form cart.
-              </li>
-              <li>
-                While checkout at cart the total list of items and its sub total
-                and total prices will be show to user before the user order.
-              </li>
-            </ul>
+          <div class="project_details">
+            <h2>Restaurant Management System</h2>
 
-            <h4 class="used">Technologies Used</h4>
-            <hr class="project-hr" />
-            <ul id="proj">
-              <li>Java</li>
-              <li>MySQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
+            <div class="project_intro">
+              Developed a web-based application with separate user and admin
+              modules to streamline restaurant operations. Key features include:
+              <br />
+              <p>
+                <strong>User Account Management:</strong> Users can create
+                accounts and place orders.
+              </p>
+              <p>
+                <strong>Categorized Menu:</strong> Menu items are organized into
+                categories for easy navigation and selection.
+              </p>
+              <p>
+                <strong>Cart Functionality:</strong> Users can add items to the
+                cart, view the current item count, and remove items as needed.
+              </p>
+              <p>
+                <strong>Order Summary:</strong> During checkout, users are
+                presented with a detailed list of selected items, including
+                subtotals and the total price, before confirming their order.
+              </p>
+            </div>
 
-            <a
-              href="https://github.com/Manideep4005/RestaurantManagementSystem"
-              id="github-link"
-              target="_blank"
-              >GitHub</a
-            >
+            <div class="project_tech_used">
+              <h2>Technologies Used</h2>
+              <div>
+                <ul>
+                  <li>Java</li>
+                  <li>MySQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="github_link">
+              <a
+                href="https://github.com/Manideep4005/RestaurantManagementSystem"
+                >Github</a
+              >
+            </div>
           </div>
 
-          <div class="project-tabs">
-            <h4>STUDENT SYSTEM</h4>
-            <hr class="project-hr" />
-            <ul>
-              <li>
-                A min web application used to store the student information in
-                database.
-              </li>
-              <li>
-                added a feature to perfrom CURD opertaions on student information
-                and as well as admin profile.
-              </li>
-            </ul>
-            <h4 class="used">Technologies Used</h4>
-            <hr class="project-hr" />
-            <ul id="proj">
-              <li>Java</li>
-              <li>MySQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Maven</li>
-              <li>Spring MVC</li>
-              <li>Hibernate</li>
-            </ul>
-            <a
-              href="https://github.com/Manideep4005/StudentUserSystem"
-              id="github-link"
-              target="_blank"
-              >GitHub</a
-            >
+          <div class="project_details">
+            <h2>Student Management System</h2>
+
+            <div class="project_intro">
+              Created a web-based application to efficiently manage student
+              information. Key features include: <br />
+              <p>
+                <strong>Database Management:</strong> Stores and organizes
+                student records in a structured database.
+              </p>
+              <p>
+                <strong>CURD Operations</strong> Enables Create, Read, Update,
+                and Delete functionalities for student data and admin profiles.
+              </p>
+              <p>
+                <strong>User-Freindly Interface</strong> Simplified interaction
+                for both students and admins.
+              </p>
+            </div>
+
+            <div class="project_tech_used">
+              <h2>Technologies Used</h2>
+              <div>
+                <ul>
+                  <li>Java</li>
+                  <li>MySQL</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Maven</li>
+                  <li>Spring MVC</li>
+                  <li>Hibernate</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="github_link">
+              <a href="https://github.com/Manideep4005/StudentUserSystem"
+                >Github</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact me Section -->
-
-      <section class="contact-me" id="CONTACT">
-        <div class="contact">
-          <div class="contact-head">
-            <h2>Get in Touch</h2>
-          </div>
-
-          <div class="contact-form">
-            <form
-              action="https://formspree.io/f/meojqanp"
-              method="POST"
-              id="form"
-            >
+      <!-- CONTACT ME SECTION -->
+      <section id="CONTACT">
+        <div class="contact_parent_div">
+          <h2>Get in Touch</h2>
+          <div class="contact_form">
+            <form id="contactForm">
               <input
-                type="hidden"
-                name="_subject"
-                value="Contact request from personal website"
+                type="text"
+                id="userName"
+                placeholder="Your Name"
+                required
               />
-
-              <input type="text" name="name" required placeholder="Your Name" />
-
               <input
                 type="email"
-                name="email"
+                id="userEmail"
                 placeholder="Your Email"
                 required
               />
-
               <textarea
-                name="message"
+                id="message"
                 placeholder="Your Message"
-                rows="10"
+                rows="6"
+                cols="50"
                 required
               ></textarea>
-
-              <button type="submit">Send</button>
+              <button type="submit">Send Message</button>
             </form>
+          </div>
+
+          <h1 id="connectMe">Connect me</h1>
+
+          <div class="contact_social_links">
+            <a href="https://www.linkedin.com/in/manideepnakka"
+              ><i class="fa fa-linkedin"></i></a
+            ><a href="https://www.github.com/Manideep4005"
+              ><i class="fa fa-github"></i></a
+            ><a href="mailto:nakkamanideep098@gmail.com"
+              ><i class="fa fa-envelope"></i
+            ></a>
           </div>
         </div>
       </section>
     </main>
-    <!-- COPY RIGHT SECTION -->
 
-    <div class="copyright">
-      <p>
-        copyright <i class="fa fa-copyright"></i> Manideep Nakka, All Rights
-        Reserved
-      </p>
+    <!-- TOP BUTTON -->
+    <div class="top_btn">
+      <a href="#HOME"><i class="fa fa-arrow-up"></i></a>
     </div>
 
-    <!-- Go TO TOP BUTTON  -->
-    <div class="top-btn" title="Go to Top">
-      <button id="myBtn" onclick="topFunction()">
-        <i class="fa fa-arrow-up"></i>
-      </button>
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+      <div>
+        <p>
+          Copyright <i class="fa fa-copyright"></i> Manideep Nakka, All Rights
+          Reserved
+        </p>
+      </div>
     </div>
 
     <div class="overlay"></div>
 
-    <script src="js/script.js"></script>
+    <div class="modal" id="successModal">
+      <div class="modal-content">
+        <div class="success-icon"></div>
+        <div class="modal-text">Email sent successfully!</div>
+        <button class="close-btn" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT  -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="js/style.js"></script>
   </body>
 </html>
