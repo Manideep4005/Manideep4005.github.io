@@ -1,5 +1,44 @@
+(function () {
+  emailjs.init('QKWIPHwLEo3d_q_MR'); // Replace with your public key
+})();
+
+document
+  .getElementById('contactForm')
+  .addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Collect form data
+    const userName = document.getElementById('userName').value;
+    const userEmail = document.getElementById('userEmail').value;
+    const message = document.getElementById('message').value;
+
+    // Send email using EmailJS
+    emailjs
+      .send('service_zfnir1m', 'template_bccm26b', {
+        user_name: userName,
+        user_email: userEmail,
+        message: message,
+      })
+      .then(openModal, function (error) {
+        alert('Failed to send email: ' + JSON.stringify(error));
+      });
+  });
+
+// Open the modal
+function openModal() {
+  const modal = document.getElementById('successModal');
+  modal.style.display = 'flex'; // Show the modal
+}
+
+// Close the modal with fade-out effect
+function closeModal() {
+  const modal = document.getElementById('successModal');
+  modal.style.display = 'none'; // Show the modaluration
+  document.getElementById('contactForm').reset();
+}
+
 // go to top button
-let myBtn = document.querySelector('.top-btn');
+let myBtn = document.querySelector('.top_btn');
 
 window.onscroll = function () {
   scrollFunction();
@@ -16,89 +55,36 @@ function scrollFunction() {
   }
 }
 
-function topFunction() {
-  document.body.scrollTop = 75;
-  document.documentElement.scrollTop = 75;
-}
-
-// FUNCTION FOR OPENING MY IMAGE MODAL
-const openImgBtn = document.querySelectorAll('#my-img');
-const closeImgBtn = document.querySelector('#close-img-btn');
-const imgModal = document.querySelector('.modal');
+// SIDE BAR FUNCTIONALITY
+const sidebar = document.querySelector('.sidebar');
+const openSidebar = document.getElementById('sidebar_open_btn');
+const clodeSidebar = document.querySelector('#sidebar_close_btn');
 const overlay = document.querySelector('.overlay');
 
-function openImg() {
-  imgModal.style.display = 'flex';
-  document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
-  document.querySelector('.overlay').style.display = 'block';
-  console.log('btn is clicked');
-}
-
-function closeImg() {
-  imgModal.style.display = 'none';
-  document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
-  document.querySelector('.overlay').style.display = 'none';
-  console.log('btn is clicked');
-}
-
-for (let j = 0; j < openImgBtn.length; j++)
-  openImgBtn[j].addEventListener('click', openImg);
-
-closeImgBtn.addEventListener('click', closeImg);
-
-const root = document.querySelector(':root');
-
-const dark = document.querySelectorAll('#dark');
-
-const header = document.querySelector('.header-1');
-
-function toggleDark() {
-  if (root.classList.contains('dark')) {
-    root.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
-  } else {
-    root.classList.add('dark');
-    localStorage.setItem('theme', 'dark');
-  }
-}
-
-if (localStorage.getItem('theme') === 'dark') {
-  root.classList.add('dark');
-}
-
-for (let i = 0; i < dark.length; i++)
-  dark[i].addEventListener('click', toggleDark);
-
-/* Side Bar Open */
-const sidebarOpenBtn = document.getElementById('open-sidebar');
-const sideBarCloseBtn = document.getElementById('sidebar-close');
-const sidebar = document.querySelector('.sidebar');
-const sidebarBtns = document.querySelectorAll('#sidebar-btns');
-
-function openSidebar() {
+function openSideBar() {
   sidebar.style.width = '300px';
-  document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
-  document.querySelector('.overlay').style.display = 'block';
+  sidebar.style.padding = '20px';
+  overlay.style.display = 'block';
 }
 
 function closeSideBar() {
   sidebar.style.width = '0';
-  document.getElementsByTagName('body')[0].style.overflowY = 'scroll';
-  document.querySelector('.overlay').style.display = 'none';
+  sidebar.style.padding = '0';
+  overlay.style.display = 'none';
 }
 
-sidebarOpenBtn.addEventListener('click', openSidebar);
-sideBarCloseBtn.addEventListener('click', closeSideBar);
+openSidebar.addEventListener('click', openSideBar);
+clodeSidebar.addEventListener('click', closeSideBar);
 
-for (let i = 0; i < sidebarBtns.length; i++)
-  sidebarBtns[i].addEventListener('click', closeSideBar);
-
-overlay.addEventListener('click', closeImg);
 overlay.addEventListener('click', closeSideBar);
 
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') {
-    closeImg();
     closeSideBar();
   }
 });
+
+const sideBarNavBtns = document.querySelectorAll('.sidebar_nav_btns');
+
+for (let i = 0; i < sideBarNavBtns.length; i++)
+  sideBarNavBtns[i].addEventListener('click', closeSideBar);
