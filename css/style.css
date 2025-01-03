@@ -501,7 +501,7 @@ input:focus {
 }
 
 .top_btn > a:hover {
-  padding-bottom: 20px;
+  transform: scale(1.1);
 }
 
 /* Modal Background */
