@@ -1,454 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <title>Manideep Nakka</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="image/logo.png" type="image/png" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="sub-head-1">
-          <p>MN</p>
-          <h4>Manideep Nakka</h4>
-        </div>
-        <div class="sub-head-2">
-          <ul>
-            <li class="header_nav_btns"><a href="#HOME">HOME</a></li>
-            <li class="header_nav_btns"><a href="#ABOUT">ABOUT ME</a></li>
-            <li class="header_nav_btns"><a href="#PROJECTS">PROJECTS</a></li>
-            <li class="header_nav_btns"><a href="#CONTACT">CONTACT</a></li>
-            <li class="header_sidebar_btn" id="sidebar_open_btn">
-              <a><i class="fa fa-bars"></i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SIDE BAR  -->
-    <div class="sidebar">
-      <div class="sidebar_1">
-        <a id="sidebar_close_btn"><i class="fa fa-close"></i></a>
-      </div>
-      <div class="sidebar_2">
-        <ul>
-          <li class="sidebar_nav_btns"><a href="#HOME">HOME</a></li>
-          <li class="sidebar_nav_btns"><a href="#ABOUT">ABOUT ME</a></li>
-          <li class="sidebar_nav_btns"><a href="#PROJECTS">PROJECTS</a></li>
-          <li class="sidebar_nav_btns"><a href="#CONTACT">CONTACT</a></li>
+  <!-- SEO Meta Tags -->
+  <title>Manideep Nakka | Software Developer & Full Stack Engineer</title>
+  <meta name="description"
+    content="Portfolio of Manideep Nakka, a professional Software Developer specializing in building enterprise-grade backend systems and full-stack solutions using Spring Boot, React, and Node.js." />
+  <meta name="keywords"
+    content="Manideep Nakka, Software Developer, Full Stack Engineer, Spring Boot, React, Node.js, PostgreSQL, Portfolio" />
+  <meta name="author" content="Manideep Nakka" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="image/logo.png" type="image/png" />
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Background Glow Blobs -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+  <div class="glow-blob blob-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#HOME" class="nav-logo">
+        <span class="logo-box">MN</span>
+        <span class="logo-text">Manideep Nakka</span>
+      </a>
+
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#HOME" class="nav-link active">Home</a></li>
+          <li><a href="#ABOUT" class="nav-link">About</a></li>
+          <li><a href="#EXPERIENCE" class="nav-link">Experience</a></li>
+          <li><a href="#PROJECTS" class="nav-link">Projects</a></li>
+          <li><a href="#SKILLS" class="nav-link">Skills</a></li>
+          <li><a href="#CONTACT" class="nav-link">Contact</a></li>
         </ul>
-      </div>
-      <div class="sidebar_3">
-        <p>
-          Copyright <i class="fa fa-copyright"></i> Maindeep Nakka,<br />
-          All Rights Reserved
-        </p>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="MANIDEEP NAKKA RESUME.pdf" download target="_blank" class="btn-resume-nav">
+          <span>Resume</span>
+          <i data-lucide="download"></i>
+        </a>
+        <button class="mobile-toggle" id="sidebar_open_btn" aria-label="Open Navigation">
+          <i data-lucide="menu"></i>
+        </button>
       </div>
     </div>
+  </header>
 
-    <main>
-      <!-- HOME SECTION -->
-      <section id="HOME">
-        <div class="home_parent_div">
-          <div class="home_photo">
-            <img src="image/Manideep.JPG" alt="Manideep Nakka Photo" />
+  <!-- Mobile Sidebar Navigation Drawer -->
+  <div class="overlay" id="nav_overlay"></div>
+  <aside class="sidebar" id="mobile_sidebar">
+    <div class="sidebar-header">
+      <span class="logo-box">MN</span>
+      <button id="sidebar_close_btn" class="sidebar-close" aria-label="Close Navigation">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="#HOME" class="sidebar-link">Home</a></li>
+        <li><a href="#ABOUT" class="sidebar-link">About</a></li>
+        <li><a href="#EXPERIENCE" class="sidebar-link">Experience</a></li>
+        <li><a href="#PROJECTS" class="sidebar-link">Projects</a></li>
+        <li><a href="#SKILLS" class="sidebar-link">Skills</a></li>
+        <li><a href="#CONTACT" class="sidebar-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <p>© Manideep Nakka.<br />All Rights Reserved.</p>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- Hero Section -->
+    <section id="HOME" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content reveal">
+          <div class="badge-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Available for Opportunities</span>
           </div>
-          <div class="home_intro">
-            <h2>HEY, I'M MANIDEEP NAKKA</h2>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Manideep Nakka</span>
+          </h1>
+          <h2 class="hero-subtitle">Software Developer | Backend & Full Stack Engineer</h2>
+          <p class="hero-tagline">"Building scalable backend systems and modern web applications."</p>
+          <p class="hero-description">
+            Software Developer with professional experience building enterprise applications and full-stack solutions
+            using Spring Boot, Node.js, TypeScript, React, and PostgreSQL. Passionate about designing clean
+            architectures, solving complex business problems, and delivering production-ready software.
+          </p>
+          <div class="hero-buttons">
+            <a href="#PROJECTS" class="btn btn-primary">
+              <span>View Work</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="MANIDEEP NAKKA RESUME.pdf" download target="_blank" class="btn btn-secondary">
+              <i data-lucide="file-text"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#CONTACT" class="btn btn-tertiary">
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image-wrapper reveal">
+          <div class="image-border-glow">
+            <div class="image-container">
+              <img src="image/Manideep.JPG" alt="Manideep Nakka Profile Photo" class="hero-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="ABOUT" class="about-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">My Journey</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div class="about-grid reveal">
+          <div class="about-card glass-card">
+            <div class="card-icon-wrap">
+              <i data-lucide="code-2"></i>
+            </div>
+            <h3>Software Developer</h3>
             <p>
-              A passionate Developer eager to embark on my journey in the world
-              of software development. Armed with a solid foundation in Java
-              programming and Web Technologies, I am excited to contribute fresh
-              ideas and skills to innovative projects.
+              Software Developer with hands-on experience building enterprise-grade applications and full-stack
+              solutions.
+            </p>
+            <p>
+              Experienced in designing REST APIs, implementing business workflows, managing databases, and delivering
+              production-ready software. Passionate about writing clean code, solving complex problems, and continuously
+              learning emerging technologies.
+            </p>
+          </div>
+
+          <div class="about-details-column">
+            <!-- Quick Stats / Core Philosophy -->
+            <div class="about-card glass-card stat-card">
+              <div class="stat-item">
+                <span class="stat-number">1+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Projects Built</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Commitment</span>
+              </div>
+            </div>
+
+            <div class="about-card glass-card text-card">
+              <h3>Core Philosophy</h3>
+              <p>
+                I believe in writing code that is clean, readable, and highly maintainable. Designing architectures that
+                scale easily to support dynamic business rules and validation logic is my core focus.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="EXPERIENCE" class="experience-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Career Journey</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Company Card Node -->
+          <div class="timeline-node reveal">
+            <div class="timeline-dot">
+              <i data-lucide="briefcase"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <div class="timeline-title-wrap">
+                  <h3>Software Developer</h3>
+                  <h4 class="company-name">Amigo Techno Park</h4>
+                </div>
+                <span class="timeline-date">June 2025 – Present</span>
+              </div>
+
+              <p class="timeline-intro-desc">
+                Working as a core software developer building, maintaining, and scaling enterprise web applications and
+                business logic engines.
+              </p>
+
+              <div class="experience-details">
+                <h5 class="sub-heading">Key Responsibilities:</h5>
+                <ul class="responsibilities-list">
+                  <li>Developed and maintained backend REST APIs.</li>
+                  <li>Designed PostgreSQL database schemas and optimized queries.</li>
+                  <li>Participated in debugging, testing, deployment, and production support.</li>
+                  <li>Collaborated with stakeholders and team members to deliver business requirements.</li>
+                </ul>
+
+                <h5 class="sub-heading project-header">Project Architecture Experience:</h5>
+
+                <div class="project-experience-grid">
+                  <div class="experience-project-card">
+                    <div class="exp-project-title">
+                      <i data-lucide="receipt"></i>
+                      <h6>Billing System</h6>
+                    </div>
+                    <p>Developed modules supporting dynamic billing workflows and charge computations. Implemented
+                      tariff-based processing and demand generation logic. Designed maintainable backend components
+                      following clean architecture principles.</p>
+                  </div>
+
+                  <div class="experience-project-card">
+                    <div class="exp-project-title">
+                      <i data-lucide="file-check"></i>
+                      <h6>NOC Application System</h6>
+                    </div>
+                    <p>Built workflow-driven modules supporting application lifecycle management. Implemented
+                      draft-saving capabilities and multi-step application processing. Integrated document generation
+                      and business validations.</p>
+                  </div>
+
+                  <div class="experience-project-card">
+                    <div class="exp-project-title">
+                      <i data-lucide="cpu"></i>
+                      <h6>Policy Management Engine</h6>
+                    </div>
+                    <p>Developed dynamic rule evaluation mechanisms supporting configurable policies. Worked with
+                      expression-based rule execution and backend integrations. Contributed to scalable system design
+                      for handling complex business logic.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="PROJECTS" class="projects-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">Projects Portfolio</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Featured Hero Project Card -->
+        <div class="featured-project-container reveal">
+          <div class="featured-project-card glass-card">
+            <div class="featured-project-glow"></div>
+            <div class="featured-project-content">
+              <div class="project-type-badge">Featured Personal Project</div>
+              <h3 class="featured-project-title">Hospital Management System</h3>
+              <div class="featured-project-tags">
+                <span class="tech-pill">Spring Boot</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">PostgreSQL</span>
+              </div>
+              <p class="featured-project-desc">
+                A comprehensive healthcare management platform designed to streamline hospital operations and improve
+                patient experience. Built to handle complex healthcare workflows and secure data exchange.
+              </p>
+              <div class="featured-project-features">
+                <h5>Core Implementation Features:</h5>
+                <ul class="features-list-grid">
+                  <li><i data-lucide="check-circle-2"></i> Role-based authentication and authorization</li>
+                  <li><i data-lucide="check-circle-2"></i> Patient registration and profile management</li>
+                  <li><i data-lucide="check-circle-2"></i> Appointment booking and scheduling workflows</li>
+                  <li><i data-lucide="check-circle-2"></i> Doctor dashboard for managing consultations</li>
+                  <li><i data-lucide="check-circle-2"></i> Administrative management features</li>
+                  <li><i data-lucide="check-circle-2"></i> Responsive React frontend integrated with Spring Boot backend
+                  </li>
+                  <li><i data-lucide="check-circle-2"></i> Secure REST API communication</li>
+                </ul>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Manideep4005/hms-backend-springboot.git" target="_blank" rel="noopener"
+                  class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                  <span>View GitHub</span>
+                </a>
+                <a href="https://hms-react-frontend.vercel.app/" target="_blank" class="btn btn-secondary">
+                  <i data-lucide="external-link"></i>
+                  <span>View Site</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Projects Section Title -->
+        <div class="secondary-projects-header reveal">
+          <h3>Other Personal Projects</h3>
+        </div>
+
+        <!-- Grid of other projects -->
+        <div class="projects-grid reveal">
+          <!-- Project 1: User Authentication -->
+          <div class="project-card glass-card">
+            <div class="project-card-header">
+              <i data-lucide="shield-check" class="project-icon"></i>
+              <a href="https://github.com/Manideep4005/AuthenticateUser" target="_blank" rel="noopener"
+                class="project-git-link" aria-label="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+            </div>
+            <h4 class="project-title">User Authentication</h4>
+            <p class="project-desc">
+              Designed and developed a secure user authentication system with email verification for enhanced account
+              safety. Restrictions apply until verified.
+            </p>
+            <ul class="project-bullets">
+              <li>Hash token generation for verification email.</li>
+              <li>Secure login session and password management.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Spring MVC</span>
+              <span class="tech-pill">Hibernate</span>
+              <span class="tech-pill">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Project 2: Restaurant Management -->
+          <div class="project-card glass-card">
+            <div class="project-card-header">
+              <i data-lucide="utensils" class="project-icon"></i>
+              <a href="https://github.com/Manideep4005/RestaurantManagementSystem" target="_blank" rel="noopener"
+                class="project-git-link" aria-label="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+            </div>
+            <h4 class="project-title">Restaurant Management</h4>
+            <p class="project-desc">
+              Web application with separate user and admin modules supporting menu categorization, responsive cart
+              workflows, and checkout calculations.
+            </p>
+            <ul class="project-bullets">
+              <li>Menu categorized browsing & cart.</li>
+              <li>Order totals computation & summaries.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">JSP/Servlets</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">HTML/CSS</span>
+            </div>
+          </div>
+
+          <!-- Project 3: Student Management System -->
+          <div class="project-card glass-card">
+            <div class="project-card-header">
+              <i data-lucide="graduation-cap" class="project-icon"></i>
+              <a href="https://github.com/Manideep4005/StudentUserSystem" target="_blank" rel="noopener"
+                class="project-git-link" aria-label="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+              </a>
+            </div>
+            <h4 class="project-title">Student Management</h4>
+            <p class="project-desc">
+              Created a student information platform to handle full CRUD operations for student records and
+              administrative profile credentials.
+            </p>
+            <ul class="project-bullets">
+              <li>CRUD data flow and structured DB design.</li>
+              <li>User-friendly interfaces for students/admins.</li>
+            </ul>
+            <div class="project-tags">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Spring MVC</span>
+              <span class="tech-pill">Hibernate</span>
+              <span class="tech-pill">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="SKILLS" class="skills-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-grid reveal">
+          <!-- Backend Card -->
+          <div class="skills-card glass-card">
+            <div class="skills-card-header">
+              <div class="skills-icon-wrapper purple-glow">
+                <i data-lucide="server"></i>
+              </div>
+              <h3>Backend Development</h3>
+            </div>
+            <div class="skills-list">
+              <span class="skill-badge">Java</span>
+              <span class="skill-badge">Spring Boot</span>
+              <span class="skill-badge">Node.js</span>
+              <span class="skill-badge">TypeScript</span>
+              <span class="skill-badge">Express.js</span>
+              <span class="skill-badge">REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Frontend Card -->
+          <div class="skills-card glass-card">
+            <div class="skills-card-header">
+              <div class="skills-icon-wrapper blue-glow">
+                <i data-lucide="layout"></i>
+              </div>
+              <h3>Frontend Development</h3>
+            </div>
+            <div class="skills-list">
+              <span class="skill-badge">React</span>
+              <span class="skill-badge">JavaScript</span>
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+            </div>
+          </div>
+
+          <!-- Database Card -->
+          <div class="skills-card glass-card">
+            <div class="skills-card-header">
+              <div class="skills-icon-wrapper green-glow">
+                <i data-lucide="database"></i>
+              </div>
+              <h3>Databases</h3>
+            </div>
+            <div class="skills-list">
+              <span class="skill-badge">PostgreSQL</span>
+              <span class="skill-badge">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Tools Card -->
+          <div class="skills-card glass-card">
+            <div class="skills-card-header">
+              <div class="skills-icon-wrapper orange-glow">
+                <i data-lucide="wrench"></i>
+              </div>
+              <h3>Tools & Editors</h3>
+            </div>
+            <div class="skills-list">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">Postman</span>
+              <span class="skill-badge">VS Code</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="CONTACT" class="contact-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid reveal">
+          <!-- Contact details & info -->
+          <div class="contact-info glass-card">
+            <h3>Let's build something awesome</h3>
+            <p class="contact-info-desc">
+              Have a question, feedback, or a project collaboration in mind? Drop me a message, and I'll get back to you
+              as soon as possible.
             </p>
 
-            <div class="resume">
-              <a href="MANIDEEP NAKKA RESUME.pdf" class="resume_btn" download
-                >Download my Resume <i class="fa fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="ABOUT">
-        <div class="about_parent_div">
-          <div class="about_child_div">
-            <div class="about_intro">
-              <h2>About Me</h2>
-              <div>
-                <p>
-                  I am a passionate and driven individual with a strong
-                  foundation in Java programming and web technologies. Holding
-                  an MBA in Finance and a B.Com in Computers, I have developed a
-                  diverse skill set that bridges business and technical aspects.
-                </p>
-                <p>
-                  Currently focused on advancing my expertise in software
-                  development, particularly in Java, J2EE, and full-stack web
-                  development, I aim to apply my knowledge of data structures,
-                  algorithms, and industry-standard frameworks to create
-                  innovative, user-centric solutions.
-                </p>
-                <p>
-                  With hands-on experience in backend development,
-                  authentication mechanisms, and database management, I am
-                  always eager to learn and explore new areas of technology. As
-                  I seek opportunities in software development and data
-                  engineering, I look forward to collaborating with dynamic
-                  teams, contributing to impactful projects, and continually
-                  enhancing my skills to shape the future of technology.
-                </p>
-              </div>
-            </div>
-
-            <div class="about_education">
-              <h2>Education</h2>
-
-              <div>
-                <div class="about_degree">
-                  <h4>MBA in Finance</h4>
-                  <p>Sri Indu P.G College - 2022</p>
-                  <p>6.59 GPA</p>
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <i data-lucide="mail"></i>
                 </div>
+                <div class="method-details">
+                  <span>Email Me</span>
+                  <a href="mailto:nakkamanideep098@gmail.com">nakkamanideep098@gmail.com</a>
+                </div>
+              </div>
 
-                <div class="about_degree">
-                  <h4>B.Com in Computer's</h4>
-                  <p>Arunodaya Degree College - 2020</p>
-                  <p>7.83 GPA</p>
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="method-details">
+                  <span>Location</span>
+                  <p>Hyderabad, India</p>
                 </div>
               </div>
             </div>
 
-            <div class="about_training">
-              <h2>Training Details</h2>
-
-              <div>
-                <h3>6-Month Java Training</h3>
-                <p>360 Digrii | Hyderabad</p>
-                <p>
-                  Covered core Java concepts, object-oriented programming, data
-                  structures, algorithms, and industry-relevant frameworks.
-                  Focused on practical application and problem-solving to build
-                  strong coding and software development skills.
-                </p>
-              </div>
-            </div>
-
-            <div class="about_skills">
-              <h2>Technical Skills</h2>
-
-              <div>
-                <ul>
-                  <li>Java</li>
-                  <li>MySQL</li>
-                  <li>Oralce DB</li>
-                  <li>JavaScript</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>Spring Boot</li>
-                  <li>Hibernate</li>
-                  <li>JPA</li>
-                  <li>Maven</li>
-                  <li>RESTful API's</li>
-                  <li>Object Oriented Programming</li>
-                  <li>Software Development Life Cycle</li>
-                </ul>
-              </div>
-            </div>
-
-            
-
-            <div class="about_tools">
-              <h2>Tools</h2>
-
-              <div>
-                <ul>
-                  <li>Eclipse</li>
-                  <li>VS Code</li>
-                  <li>Postman</li>
-                  <li>Apache Tomcat Server</li>
-                </ul>
+            <div class="social-links-wrap">
+              <h4>Follow & Connect</h4>
+              <div class="social-links">
+                <a href="https://www.linkedin.com/in/manideepnakka" target="_blank" rel="noopener"
+                  class="social-icon-btn" aria-label="LinkedIn Profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect width="4" height="12" x="2" y="9" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </a>
+                <a href="https://www.github.com/Manideep4005" target="_blank" rel="noopener" class="social-icon-btn"
+                  aria-label="GitHub Profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
+                </a>
+                <a href="mailto:nakkamanideep098@gmail.com" class="social-icon-btn" aria-label="Send Email">
+                  <i data-lucide="mail"></i>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- PROJECTS SECTION -->
-      <section id="PROJECTS">
-        <div class="project_parent_div">
-          <h2>Projects</h2>
-
-          <div class="project_details">
-            <h2>Hospital Management System</h2>
-
-            <div class="project_intro">
-              Developed a comprehensive Hospital Management System to streamline
-              healthcare operations. Key features include: <br />
-              <p>
-                <strong>Patient Registration:</strong> Simplified form for
-                registering new patients with secure data storage.
-              </p>
-              <p>
-                <strong>Appointment Scheduling:</strong> Efficient scheduling
-                system ensuring seamless coordination between patients and
-                doctors.
-              </p>
-              <p>
-                <strong>Medical Record Management:</strong> Organized database
-                for storing and retrieving patient medical histories.
-              </p>
-            </div>
-
-            <div class="project_tech_used">
-              <h2>Technologies Used</h2>
-              <div>
-                <ul>
-                  <li>Core Java</li>
-                  <li>Servlets</li>
-                  <li>JSP</li>
-                  <li>JavaScript</li>
-                  <li>MySQL</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>SMTP</li>
-                  <li>Eclipse IDE</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="github_link">
-              <a href="https://github.com/Manideep4005/HospitalManagementSystem"
-                >Github</a
-              >
-            </div>
-          </div>
-
-          <div class="project_details">
-            <h2>User Authentication</h2>
-
-            <div class="project_intro">
-              Designed and developed a secure user authentication system with
-              email verification for enhanced account safety. Key features
-              include: <br />
-              <p>
-                <strong>Account Creation:</strong> Users create accounts, but
-                login access is restricted until verification.
-              </p>
-              <p>
-                <strong>Email Verification:</strong> A hash token is sent to the
-                registered email for account activation.
-              </p>
-              <p>
-                <strong>Secure Login:</strong> Verified users can log in anytime
-                with secure session management.
-              </p>
-            </div>
-
-            <div class="project_tech_used">
-              <h2>Technologies Used</h2>
-              <div>
-                <ul>
-                  <li>Java</li>
-                  <li>MySQL</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>Maven</li>
-                  <li>Spring MVC</li>
-                  <li>Hibernate</li>
-                  <li>SMTP</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="github_link">
-              <a href="https://github.com/Manideep4005/AuthenticateUser"
-                >Github</a
-              >
-            </div>
-          </div>
-
-          <div class="project_details">
-            <h2>Restaurant Management System</h2>
-
-            <div class="project_intro">
-              Developed a web-based application with separate user and admin
-              modules to streamline restaurant operations. Key features include:
-              <br />
-              <p>
-                <strong>User Account Management:</strong> Users can create
-                accounts and place orders.
-              </p>
-              <p>
-                <strong>Categorized Menu:</strong> Menu items are organized into
-                categories for easy navigation and selection.
-              </p>
-              <p>
-                <strong>Cart Functionality:</strong> Users can add items to the
-                cart, view the current item count, and remove items as needed.
-              </p>
-              <p>
-                <strong>Order Summary:</strong> During checkout, users are
-                presented with a detailed list of selected items, including
-                subtotals and the total price, before confirming their order.
-              </p>
-            </div>
-
-            <div class="project_tech_used">
-              <h2>Technologies Used</h2>
-              <div>
-                <ul>
-                  <li>Java</li>
-                  <li>MySQL</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="github_link">
-              <a
-                href="https://github.com/Manideep4005/RestaurantManagementSystem"
-                >Github</a
-              >
-            </div>
-          </div>
-
-          <div class="project_details">
-            <h2>Student Management System</h2>
-
-            <div class="project_intro">
-              Created a web-based application to efficiently manage student
-              information. Key features include: <br />
-              <p>
-                <strong>Database Management:</strong> Stores and organizes
-                student records in a structured database.
-              </p>
-              <p>
-                <strong>CURD Operations</strong> Enables Create, Read, Update,
-                and Delete functionalities for student data and admin profiles.
-              </p>
-              <p>
-                <strong>User-Freindly Interface</strong> Simplified interaction
-                for both students and admins.
-              </p>
-            </div>
-
-            <div class="project_tech_used">
-              <h2>Technologies Used</h2>
-              <div>
-                <ul>
-                  <li>Java</li>
-                  <li>MySQL</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>Maven</li>
-                  <li>Spring MVC</li>
-                  <li>Hibernate</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="github_link">
-              <a href="https://github.com/Manideep4005/StudentUserSystem"
-                >Github</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT ME SECTION -->
-      <section id="CONTACT">
-        <div class="contact_parent_div">
-          <h2>Get in Touch</h2>
-          <div class="contact_form">
+          <!-- Form card -->
+          <div class="contact-form-card glass-card">
             <form id="contactForm">
-              <input
-                type="text"
-                id="userName"
-                placeholder="Your Name"
-                required
-              />
-              <input
-                type="email"
-                id="userEmail"
-                placeholder="Your Email"
-                required
-              />
-              <textarea
-                id="message"
-                placeholder="Your Message"
-                rows="6"
-                cols="50"
-                required
-              ></textarea>
-              <button type="submit">Send Message</button>
+              <div class="form-group">
+                <label for="userName">Full Name</label>
+                <div class="input-wrapper">
+                  <i data-lucide="user" class="input-icon"></i>
+                  <input type="text" id="userName" placeholder="Your Name" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userEmail">Email Address</label>
+                <div class="input-wrapper">
+                  <i data-lucide="mail" class="input-icon"></i>
+                  <input type="email" id="userEmail" placeholder="you@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <div class="input-wrapper">
+                  <textarea id="message" rows="5" placeholder="How can I help you today?" required></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit-btn" id="submitBtn">
+                <span>Send Message</span>
+                <i data-lucide="send" id="btnIcon"></i>
+                <span class="spinner" id="btnSpinner" style="display: none;"></span>
+              </button>
             </form>
           </div>
-
-          <h1 id="connectMe">Connect me</h1>
-
-          <div class="contact_social_links">
-            <a href="https://www.linkedin.com/in/manideepnakka"
-              ><i class="fa fa-linkedin"></i></a
-            ><a href="https://www.github.com/Manideep4005"
-              ><i class="fa fa-github"></i></a
-            ><a href="mailto:nakkamanideep098@gmail.com"
-              ><i class="fa fa-envelope"></i
-            ></a>
-          </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <!-- TOP BUTTON -->
-    <div class="top_btn">
-      <a href="#HOME"><i class="fa fa-arrow-up"></i></a>
-    </div>
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+    <i data-lucide="arrow-up"></i>
+  </button>
 
-    <!-- COPYRIGHT -->
-    <div class="copyright">
-      <div>
-        <p>
-          Copyright <i class="fa fa-copyright"></i> Manideep Nakka, All Rights
-          Reserved
-        </p>
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="copyright">© Manideep Nakka. All Rights Reserved.</p>
+      <div class="footer-links">
+        <a href="#HOME">Home</a>
+        <a href="#ABOUT">About</a>
+        <a href="#EXPERIENCE">Experience</a>
+        <a href="#PROJECTS">Projects</a>
+        <a href="#SKILLS">Skills</a>
+        <a href="#CONTACT">Contact</a>
       </div>
     </div>
+  </footer>
 
-    <div class="overlay"></div>
+  <!-- EmailJS and Custom Scripts -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/script.js"></script>
+</body>
 
-    <div class="modal" id="successModal">
-      <div class="modal-content">
-        <div class="success-icon"></div>
-        <div class="modal-text">Email sent successfully!</div>
-        <button class="close-btn" onclick="closeModal()">OK</button>
-      </div>
-    </div>
-
-    <!-- JAVASCRIPT  -->
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script src="js/script.js"></script>
-  </body>
 </html>
